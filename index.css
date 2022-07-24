@@ -1,0 +1,34 @@
+#content {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 1.5;
+  width: 50%;
+  margin: auto;
+}
+
+.page-title {
+  line-height: 1.35;
+  font-size: 2em;
+  font-weight: 100;
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.page-text {
+  margin: 0 0 1.333em;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.discord-link {
+  font-weight: 400;
+  font-size: 2em;
+}
