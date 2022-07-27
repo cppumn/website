@@ -8,16 +8,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <div>
+    <Router basename={process.env.PUBLIC_URL} >
       <UofMHeader />
-      <Router basename={process.env.PUBLIC_URL} >
-        <Routes>
-          <Route path='/' element={ <MainPage /> } />
-          <Route path='/room' element={ <RoomPage /> } />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path='/' element={ <MainPage /> } />
+        <Route path='/room' element={ <RoomPage /> } />
+      </Routes>
       <UofMFooter />
-    </div>
+    </Router>
   )
 }
 
