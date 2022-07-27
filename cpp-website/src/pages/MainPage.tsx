@@ -1,9 +1,12 @@
 import "css/MainPage.css"
 
+import { Link } from "react-router-dom"
+
 const MainPage = () => {
   return (
     <div className="page">
       <h2 className="page-title"> Welcome to the Competitive Programming Club (CPP) </h2>
+      <Link to="/room"> Room Page </Link>
       <div className="page-text">
         <p>
           We're a student group at the University of Minnesota interested in competitive programming.
