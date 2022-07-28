@@ -6,7 +6,7 @@ const MainPage = () => {
   return (
     <div className="page">
       <h2 className="page-title"> Welcome to the Competitive Programming Club (CPP) </h2>
-      <Link to="/room"> Room Page </Link>
+      <Link to="/room" state={{msg: "Groovtama: You barely made it!"}}> Room Page </Link>
       <div className="page-text">
         <p>
           We're a student group at the University of Minnesota interested in competitive programming.
