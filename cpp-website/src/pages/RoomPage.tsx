@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom"
 
 const RoomPage = () => {
   const location: any = useLocation()
-  const msg: any = location.state ? location.state.msg : "you did not come from the link on the main page"
+  const msg: string = location.state ? location.state.msg : "you did not come from the link on the main page"
 
   useEffect(() => {
     console.log(msg)
