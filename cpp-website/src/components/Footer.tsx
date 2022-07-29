@@ -10,21 +10,25 @@ const CPPTheme = {
   darkblue: "#014284"
 };
 
+const email = "cpp@umn.edu"; // not an actual email... yet
+const githubOrg = "https://github.com/cppumn";
+const discordInvite = "https://discord.gg/6Cyr7K9Sfk";
+
 const Footer = () => {
   return (
-    <Flex flexDir="column" align="center" bg="rgba(0, 0, 0, 0.2)" p={5} gap={0}>
+    <Flex flexDir="column" align="center" bg="rgba(0, 0, 0, 0.2)" p={3} gap={0}>
       <Text color={CPPTheme.blue} fontWeight={400}> Competitive Programming Club </Text>
-      <Text color={CPPTheme.blue} fontWeight={400}> copyright @ cpp.umn.edu </Text>
+      <Text color={CPPTheme.blue} fontWeight={300}> copyright @ cpp.umn.edu </Text>
       <Flex flexDir="row" align="center" fontSize={24} gap={3} h={5} mt={1}>
-        <ChakraLink href="https://gmail.com" isExternal>
+        <ChakraLink href={`mailto:${email}`} title={email} isExternal>
           <FontAwesomeIcon icon={faEnvelope}/>
         </ChakraLink>
         <Divider orientation="vertical" borderColor="#000000"/>
-        <ChakraLink href="https://github.com/cppumn" isExternal>
+        <ChakraLink href={githubOrg} title={githubOrg} isExternal>
           <FontAwesomeIcon icon={faGithub}/>
         </ChakraLink>
         <Divider orientation="vertical" borderColor="#000000"/>
-        <ChakraLink href="https://discord.gg" isExternal>
+        <ChakraLink href={discordInvite} title={discordInvite} isExternal>
           <FontAwesomeIcon icon={faDiscord} />
         </ChakraLink>
       </Flex>
