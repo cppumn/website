@@ -6,18 +6,21 @@ import RoomPage from "pages/RoomPage";
 import PageNotFound from "pages/PageNotFound";
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { chakra } from "@chakra-ui/system";
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL} >
-      <UofMHeader />
-        <Routes>
-          <Route path='/' element={ <MainPage /> } />
-          <Route path='/room' element={ <RoomPage /> } />
-          <Route path='/*' element={ <PageNotFound /> } />
-        </Routes>
-      <UofMFooter />
-    </Router>
+    <chakra.div minH={"100vh"}>
+      <Router basename={process.env.PUBLIC_URL} >
+        <UofMHeader />
+          <Routes>
+            <Route path='/' element={ <MainPage /> } />
+            <Route path='/room' element={ <RoomPage /> } />
+            <Route path='/*' element={ <PageNotFound /> } />
+          </Routes>
+        <UofMFooter />
+      </Router>
+    </chakra.div>
   );
 }
 
