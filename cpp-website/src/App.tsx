@@ -13,11 +13,11 @@ function App() {
     <chakra.div minH={"100vh"}>
       <Router basename={process.env.PUBLIC_URL} >
         <UofMHeader />
-          <Routes>
-            <Route path='/' element={ <MainPage /> } />
-            <Route path='/room' element={ <RoomPage /> } />
-            <Route path='/*' element={ <PageNotFound /> } />
-          </Routes>
+        <Routes>
+          <Route path='/' element={ <MainPage /> } />
+          <Route path='/room' element={ <RoomPage /> } />
+          <Route path='/*' element={ <PageNotFound /> } />
+        </Routes>
         <UofMFooter />
       </Router>
     </chakra.div>
