@@ -1,11 +1,11 @@
-import UofMHeader from "components/UofM/UofMHeader"
-import UofMFooter from "components/UofM/UofMFooter"
+import UofMHeader from "components/UofM/UofMHeader";
+import UofMFooter from "components/UofM/UofMFooter";
 
-import MainPage from "pages/MainPage"
-import RoomPage from "pages/RoomPage"
-import PageNotFound from "pages/PageNotFound"
+import MainPage from "pages/MainPage";
+import RoomPage from "pages/RoomPage";
+import PageNotFound from "pages/PageNotFound";
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         </Routes>
       <UofMFooter />
     </Router>
-  )
+  );
 }
 
 export default App;
