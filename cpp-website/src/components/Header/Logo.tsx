@@ -1,12 +1,12 @@
 import { HStack, Image, Heading } from "@chakra-ui/react";
-const cppLogo = require("img/logos/ClubLogo.png");
+import {logo} from "globals/CPPInfo"
 
 const Logo = () => {
 	return (
 		<HStack spacing="0.5rem">
 			<Image 
 				boxSize="50px"
-				src={cppLogo} 
+				src={logo} 
 				alt="logo of competitive programming club" 
 				maxWidth="100%"
 				height="auto"
