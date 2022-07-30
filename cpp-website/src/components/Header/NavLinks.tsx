@@ -1,11 +1,11 @@
 import { Box, Stack } from "@chakra-ui/react";
 import NavItem from "./NavItem";
 
-type INavLinksProps = {
+type NavLinksProps = {
   isOpen: boolean
 };
 
-const NavLinks = ({ isOpen }: INavLinksProps) => {
+const NavLinks = ({ isOpen }: NavLinksProps) => {
   return (
     <Box 
       display={{ base: isOpen ? "block" : "none", md: "block" }}
