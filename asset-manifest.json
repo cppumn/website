@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/website/static/js/main.24e8f67d.js",
+    "main.js": "/website/static/js/main.c5bb5839.js",
     "static/js/787.68898001.chunk.js": "/website/static/js/787.68898001.chunk.js",
     "static/media/ClubLogo.png": "/website/static/media/ClubLogo.d92210963c6aa2459041.png",
     "index.html": "/website/index.html",
-    "main.24e8f67d.js.map": "/website/static/js/main.24e8f67d.js.map",
+    "main.c5bb5839.js.map": "/website/static/js/main.c5bb5839.js.map",
     "787.68898001.chunk.js.map": "/website/static/js/787.68898001.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.24e8f67d.js"
+    "static/js/main.c5bb5839.js"
   ]
 }
