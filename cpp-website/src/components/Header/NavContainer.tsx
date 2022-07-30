@@ -15,7 +15,8 @@ const NavContainer = ({ children }: any) => {
       pt={4}
       pb={4}
       bg={CPPTheme.blue}
-      color={["white", "white", "primary.700", "primary.700"]}
+      borderBottom={`0.4rem solid ${CPPTheme.lightblue}`}
+      color="white"
     >
       {children}
     </Flex>
