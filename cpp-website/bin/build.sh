@@ -1,5 +1,5 @@
-CURBRANCH=$(git branch --show-current)
-if [ CURBANCH != "main" ] 
+CURBRANCH="$(git branch --show-current)"
+if [ ${CURBRANCH} != "main" ] 
 then 
   echo "ERROR: Must be on main branch to deploy" >> /dev/stderr
   exit 1 
