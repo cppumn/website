@@ -2,7 +2,7 @@ import { AspectRatio, Heading, Text, Flex } from "@chakra-ui/react";
 
 const MainPage = () => {
   return (
-    <Flex w="40%" m="auto" mt={5} mb={5} flexDir="column" gap={5}>
+    <Flex maxW={1024} m="auto" p={5} flexDir="column" gap={5}>
       <Heading fontSize="2em" fontWeight={400} lineHeight={1.35}> Welcome to the Competitive Programming Club (CPP) </Heading>
       <Flex flexDir="column" gap={5}>
         <Text>
@@ -16,7 +16,7 @@ const MainPage = () => {
         </Text>
       </Flex>
       <Heading size="lg" fontWeight={600} lineHeight={1.35}>UMN.CPP Discord</Heading>
-      <AspectRatio w={350} h={500}>
+      <AspectRatio maxW={350} h={500}>
         <iframe src="https://discord.com/widget?id=646499730343460864&theme=dark" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" title="Discord widget" />
       </AspectRatio> 
     </Flex>
