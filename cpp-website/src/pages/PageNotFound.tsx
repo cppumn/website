@@ -1,8 +1,10 @@
+import { Text, Flex } from "@chakra-ui/react"
+
 const PageNotFound = () => {
   return (
-    <div>
-      <h1> Uh oh, The page you are looking for was not found </h1>
-    </div>
+    <Flex justifyContent="center" alignItems="column">
+      <Text> Uh oh, The page you are looking for was not found :( </Text>
+    </Flex>
   )
 }
 
