@@ -5,7 +5,7 @@ type INavLinksProps = {
   isOpen: boolean
 };
 
-const NavBarLinks = ({ isOpen }: INavLinksProps) => {
+const NavLinks = ({ isOpen }: INavLinksProps) => {
   return (
     <Box 
       display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -35,4 +35,4 @@ const NavBarLinks = ({ isOpen }: INavLinksProps) => {
   );
 }
 
-export default NavBarLinks;
+export default NavLinks;
