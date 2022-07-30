@@ -1,7 +1,13 @@
 import UofMHeader from "components/UofM/UofMHeader";
 import UofMFooter from "components/UofM/UofMFooter";
 
+import Nav from "components/Header/Nav";
+import Footer from "components/Footer/Footer";
+
 import MainPage from "pages/MainPage";
+import SchedulePage from "pages/SchedulePage";
+import GettingStartedPage from "pages/GettingStartedPage";
+import ContactPage from "pages/ContactPage";
 import PageNotFound from "pages/PageNotFound";
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -12,13 +18,16 @@ function App() {
   return (
     <chakra.div minH={"100vh"}>
       <Router basename={process.env.PUBLIC_URL} >
-        <UofMHeader />
+        <Nav />
         <Routes>
-            <Route path='/' element={ <MainPage /> } />
-            <Route path='/*' element={ <PageNotFound /> } />
+            <Route path='/' element={ <MainPage/> }/>
+            <Route path='/schedule' element={ <SchedulePage/> }/>
+            <Route path='/gettingstarted' element={ <GettingStartedPage/> }/>
+            <Route path='/contact' element={ <ContactPage/> }/>
+            <Route path='/*' element={ <PageNotFound/> }/>
         </Routes>
         <Box top="100vh" position="sticky">
-          <UofMFooter />
+          <Footer />
         </Box>
       </Router>
     </chakra.div>

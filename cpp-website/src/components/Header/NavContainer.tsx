@@ -1,6 +1,8 @@
 import { Flex } from "@chakra-ui/react";
+import { CPPTheme } from "globals/CPPInfo";
 
-const NavBarContainer = ({ children }: any) => {
+
+const NavContainer = ({ children }: any) => {
   return (
     <Flex
       as="nav"
@@ -12,7 +14,7 @@ const NavBarContainer = ({ children }: any) => {
       p={8}
       pt={4}
       pb={4}
-      bg="#286CB1"
+      bg={CPPTheme.blue}
       color={["white", "white", "primary.700", "primary.700"]}
     >
       {children}
@@ -20,4 +22,4 @@ const NavBarContainer = ({ children }: any) => {
   );
 }
 
-export default NavBarContainer;
+export default NavContainer;
