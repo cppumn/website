@@ -1,3 +1,12 @@
+CURBRANCH=$(git branch --show-current)
+if [ CURBANCH != "main" ] 
+then 
+  echo "ERROR: Must be on main branch to deploy" >> /dev/stderr
+  exit 1 
+fi
+
+git pull origin main
+
 npm run build
 cp build/index.html build/404.html
 
