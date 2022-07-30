@@ -5,13 +5,13 @@ const Logo = () => {
   return (
     <HStack spacing="0.5rem">
       <Image 
-        boxSize={["3rem", "3.75rem", "4.75rem", "5rem"]}
+        boxSize={["3rem", "3rem", "3.5rem", "3.5rem"]}
         src={logo} 
         alt="logo of competitive programming club" 
         maxWidth="100%"
         height="auto"
       />
-      <Heading as='h1' size={['md', 'md', 'lg', 'xl']}>
+      <Heading as='h1' size={['md', 'md', 'md', 'lg']}>
         CPP UMN
       </Heading>
     </HStack>
