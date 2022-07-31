@@ -2,7 +2,7 @@ import "css/UofMHeaderFooter.css"
 
 const UofMFooter = () => {
   return (
-    <footer id="umnhf-f" className="umnhf" role="contentinfo">
+    <footer id="umnhf-f" className="umnhf" role="contentinfo" style={{border: "none"}}>
       <nav id="umnhf-f-myu">
         <h3 className="umnhf-f-title visually-hidden">For Students, Faculty, and Staff</h3>
         <ul>

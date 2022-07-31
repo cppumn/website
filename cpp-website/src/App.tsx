@@ -1,5 +1,4 @@
 import UofMHeader from "components/UofM/UofMHeader";
-import UofMFooter from "components/UofM/UofMFooter";
 
 import Nav from "components/Header/Nav";
 import Footer from "components/Footer/Footer";
@@ -18,6 +17,7 @@ function App() {
   return (
     <chakra.div minH={"100vh"}>
       <Router basename={process.env.PUBLIC_URL} >
+        <UofMHeader />
         <Nav />
         <Routes>
             <Route path='/' element={ <MainPage/> }/>

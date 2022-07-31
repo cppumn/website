@@ -14,8 +14,7 @@ const NavContainer = ({ children }: any) => {
       p={8}
       pt={4}
       pb={4}
-      bg={CPPTheme.blue}
-      borderBottom={`0.4rem solid ${CPPTheme.lightblue}`}
+      bg={"#7a0019"}
       color="white"
     >
       {children}

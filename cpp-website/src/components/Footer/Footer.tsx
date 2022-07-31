@@ -2,6 +2,7 @@ import { Flex, Text } from "@chakra-ui/react";
 
 import {CPPTheme} from "globals/CPPInfo"
 
+import UofMFooter from "components/UofM/UofMFooter";
 import FooterLinks from "./FooterLinks";
 
 const Footer = () => {
@@ -10,6 +11,7 @@ const Footer = () => {
       <Text color={CPPTheme.blue} fontWeight={400}> Competitive Programming Club </Text>
       <Text color={CPPTheme.blue} fontWeight={300}> Copyright &copy; cpp.umn.edu </Text>
       <FooterLinks />
+      <UofMFooter />
     </Flex>
   );
 };
