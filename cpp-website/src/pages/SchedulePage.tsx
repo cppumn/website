@@ -1,36 +1,32 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Center, Flex, Heading } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
-import { Calendar } from "services/GoogleCalendarApi";
+import { Calendar, calendarEvent } from "services/GoogleCalendarApi";
+import { CPPCalendarConfig } from "globals/CPPInfo";
 
-const config = {
-  clientId: "c_04skom520lh4t0kium9qg1r1vg@group.calendar.google.com",
-  apiKey: "AIzaSyAASW9GZYCIxKLVjS8wEJ1tP-oNW3028eE",
-}
+import CalendarEventList from "components/CalendarEvents/CalendarEventList";
 
 const SchedulePage = () => {
 
-  const [events, setEvents] = useState({});
+  const [events, setEvents] = useState<calendarEvent[]>([]);
 
-  const c = new Calendar(config);
-  const d = new Date("2020-08-28T07:00:00.000Z")
+  const cal = new Calendar(CPPCalendarConfig);
 
-  const h = async () => {
-    const l = await c.getUpcomingEvents(2);
-    setEvents(l)
+  const asyncSetEvents = async () => {
+    const list = await cal.getPreviousEvents();
+    setEvents(list)
   }
 
   useEffect(() => {
-    h();
+    asyncSetEvents();
   }, []);
 
   return (
     <Flex maxW={1024} m="auto" p={5} flexDir="column">
       <Heading> Schedule </Heading>
-      <Text> {d.toUTCString()} </Text>
-      <pre>
-        {JSON.stringify(events, null, 2)}
-      </pre>
+      <Center>
+        <CalendarEventList events={events}/>
+      </Center>
     </Flex>
   );
 };
