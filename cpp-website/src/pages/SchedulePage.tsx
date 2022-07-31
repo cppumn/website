@@ -10,14 +10,12 @@ const SchedulePage = () => {
 
   const [events, setEvents] = useState<calendarEvent[]>([]);
 
-  const cal = new Calendar(CPPCalendarConfig);
-
-  const asyncSetEvents = async () => {
-    const list = await cal.getUpcomingEvents(5);
-    setEvents(list)
-  }
-
   useEffect(() => {
+    const cal = new Calendar(CPPCalendarConfig);
+    const asyncSetEvents = async () => {
+      const list = await cal.getUpcomingEvents(5);
+      setEvents(list)
+    }
     asyncSetEvents();
   }, []);
 
