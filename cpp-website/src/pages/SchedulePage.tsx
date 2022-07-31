@@ -1,4 +1,4 @@
-import { Center, Flex, Heading } from "@chakra-ui/react";
+import { Center, Flex } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 import { Calendar, calendarEvent } from "services/GoogleCalendarApi";

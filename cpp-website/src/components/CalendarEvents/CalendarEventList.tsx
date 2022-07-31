@@ -7,7 +7,7 @@ import { CPPTheme } from "globals/CPPInfo";
 const CalendarEventList = ({events}: {events: calendarEvent[]}) => {
   return (
     <Flex flexDir="column" gap={5} w="100%">
-      { events.length > 0 ? <CalendarEvent event={events[0]}/> : undefined}
+      { events.length > 0 ? <CalendarEvent key={events[0].id} event={events[0]}/> : undefined}
       {events.slice(1).map(e => {return (
         <>
           <Divider borderColor={CPPTheme.blue} borderWidth={2}/>
