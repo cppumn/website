@@ -3,6 +3,7 @@ type calendarEvent = {
   iCalUID: string;
   id: string;
   status: string;
+  htmlLink: string;
   created: string;
   updated: string;
   summary?: string;
