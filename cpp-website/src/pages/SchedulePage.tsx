@@ -1,9 +1,32 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Center, Flex, Heading } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+
+import { Calendar, calendarEvent } from "services/GoogleCalendarApi";
+import { CPPCalendarConfig } from "globals/CPPInfo";
+
+import CalendarEventList from "components/CalendarEvents/CalendarEventList";
 
 const SchedulePage = () => {
+
+  const [events, setEvents] = useState<calendarEvent[]>([]);
+
+  const cal = new Calendar(CPPCalendarConfig);
+
+  const asyncSetEvents = async () => {
+    const list = await cal.getPreviousEvents();
+    setEvents(list)
+  }
+
+  useEffect(() => {
+    asyncSetEvents();
+  }, []);
+
   return (
-    <Flex maxW={1024} m="auto" p={5}>
+    <Flex maxW={1024} m="auto" p={5} flexDir="column">
       <Heading> Schedule </Heading>
+      <Center>
+        <CalendarEventList events={events}/>
+      </Center>
     </Flex>
   );
 };
