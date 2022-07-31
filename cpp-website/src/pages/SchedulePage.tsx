@@ -21,8 +21,7 @@ const SchedulePage = () => {
 
   return (
     <Flex maxW={1024} m="auto" p={5} flexDir="column">
-      <Heading> Schedule </Heading>
-      <Center>
+      <Center w="100%">
         <CalendarEventList events={events}/>
       </Center>
     </Flex>
