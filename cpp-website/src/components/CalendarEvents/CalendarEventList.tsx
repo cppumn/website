@@ -1,12 +1,19 @@
 import CalendarEvent from "./CalendarEvent";
 
 import type { calendarEvent } from "services/GoogleCalendarApi";
-import { Flex } from "@chakra-ui/react";
+import { Divider, Flex } from "@chakra-ui/react";
+import { CPPTheme } from "globals/CPPInfo";
 
 const CalendarEventList = ({events}: {events: calendarEvent[]}) => {
   return (
-    <Flex justifyContent="column" flexDir="column" gap={5}>
-      {events.map(e => {return (<CalendarEvent key={e.id} event={e}></CalendarEvent>)})}
+    <Flex flexDir="column" gap={5} w="100%">
+      { events.length > 0 ? <CalendarEvent key={events[0].id} event={events[0]}/> : undefined}
+      {events.slice(1).map(e => {return (
+        <>
+          <Divider borderColor={CPPTheme.blue} borderWidth={2}/>
+          <CalendarEvent key={e.id} event={e} />
+        </>
+      )})}
     </Flex>
   )
 };
