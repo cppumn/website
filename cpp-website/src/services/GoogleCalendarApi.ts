@@ -5,7 +5,7 @@ type calendarEvent = {
   status: string;
   created: string;
   updated: string;
-  summary: string;
+  summary?: string;
   creator: { email?: string};
   organizer: {
     email?: string;
@@ -13,8 +13,16 @@ type calendarEvent = {
   }
   description?: string;
   location?: string;
-  start: { date: string; } | { dateTime: string; timeZone: string};
-  end: { date: string; } | { dateTime: string; timeZone: string};
+  start: { 
+    date?: string;
+    dateTime?: string;
+    timeZone?: string;
+  };
+  end: { 
+    date?: string;
+    dateTime?: string;
+    timeZone?: string;
+  };
   sequence: number;
   eventType: string;
 }
@@ -35,18 +43,19 @@ class Calendar {
     return r.json();
   }
 
-  /** returns all events sorted by start time
+  /** returns all events sorted by time
    * 
    * @param index if positve, index to end at from start, if negative, will be index to start at from end
+   * @param sort string, either "start" or "end" specifying which type to sort by, by default will sort by start time
    * 
    * @return array of calendarEvents
    */
-   async getEventsSorted(index?: number): Promise<calendarEvent[]> {
+   async getEventsSorted(index?: number, sort: "start" | "end" = "start"): Promise<calendarEvent[]> {
     const d = await this.getEvents();
     let events = d.items;
     events.sort((a, b): number => {
-      let d1 = new Date("date" in a.start ? a.start.date : a.start.dateTime);
-      let d2 = new Date("date" in b.start ? b.start.date : b.start.dateTime);
+      let d1 = new Date(a[sort].date || a[sort].dateTime || "");
+      let d2 = new Date(b[sort].date || b[sort].dateTime || "");
       return d1.getTime() - d2.getTime();
     })
     return index === undefined ? events : (index < 0) ? events.slice(index) : events.slice(0, index);
@@ -55,20 +64,21 @@ class Calendar {
   /** returns the next upcoming events as an array, sorted by earliest first
    * 
    * @param howMany max number of events to return, by default wil return all upcoming events
+   * @param sort string, either "start" or "end" specifying which type to sort by, by default will sort by start time
    * 
    * @return array of calendarEvents
    */
-  async getUpcomingEvents(howMany: number = -1): Promise<calendarEvent[]> {
+  async getUpcomingEvents(howMany: number = -1, sort: "start" | "end" = "start"): Promise<calendarEvent[]> {
     const d = await this.getEvents();
     let events = d.items;
     let now = new Date();
     events = events.filter(e => {
-      let date = new Date("date" in e.start ? e.start.date : e.start.dateTime);
+      let date = new Date(e[sort].date || e[sort].dateTime || "");
       return date >= now;
     });
     events.sort((a, b): number => {
-      let d1 = new Date("date" in a.start ? a.start.date : a.start.dateTime);
-      let d2 = new Date("date" in b.start ? b.start.date : b.start.dateTime);
+      let d1 = new Date(a[sort].date || a[sort].dateTime || "");
+      let d2 = new Date(b[sort].date || b[sort].dateTime || "");
       return d1.getTime() - d2.getTime();
     })
     return howMany < 0 ? events : events.slice(0, howMany);
@@ -77,20 +87,21 @@ class Calendar {
   /** returns the previous events as an array, sorted by latest first
    * 
    * @param howMany max number of events to return, by default wil return all previous events
+   * @param sort string, either "start" or "end" specifying which type to sort by, by default will sort by start time
    * 
    * @return array of calendarEvents
    */
-   async getPreviousEvents(howMany: number = -1): Promise<calendarEvent[]> {
+   async getPreviousEvents(howMany: number = -1, sort: "start" | "end" = "start"): Promise<calendarEvent[]> {
     const d = await this.getEvents();
     let events = d.items;
     let now = new Date();
     events = events.filter(e => {
-      let date = new Date("date" in e.start ? e.start.date : e.start.dateTime);
+      let date = new Date(e[sort].date || e[sort].dateTime || "");
       return date <= now;
     });
     events.sort((a, b): number => {
-      let d1 = new Date("date" in a.start ? a.start.date : a.start.dateTime);
-      let d2 = new Date("date" in b.start ? b.start.date : b.start.dateTime);
+      let d1 = new Date(a[sort].date || a[sort].dateTime || "");
+      let d2 = new Date(b[sort].date || b[sort].dateTime || "");
       return d2.getTime() - d1.getTime();
     })
     return howMany < 0 ? events : events.slice(0, howMany);
