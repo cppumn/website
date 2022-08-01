@@ -8,7 +8,7 @@ import DateBox from "./DateBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faClock, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
-const StyledLink = styled(Text)`
+const StyledLink = styled(Heading)`
   &:before {
     content: '';
     position: absolute;
@@ -46,15 +46,14 @@ const CalendarEvent = ({event}: {event : calendarEvent}) => {
         <ChakraLink href={event.htmlLink} isExternal>
           <StyledLink
             display="inline-block" 
-            fontSize={['sm', 'md', 'lg', 'xl']}
             position="relative"
-            color="white"
+            color={CPPTheme.lightblue}
             textDecoration="none"
           >
-            <Heading color={CPPTheme.lightblue}> {event.summary} </Heading>
+            {event.summary}
           </StyledLink>
         </ChakraLink>
-        <Text> {event.description} </Text>
+        <Text className="normalLink" dangerouslySetInnerHTML={{__html: event.description || ""}} />
         {event.location ?  
           <Text> 
             <FontAwesomeIcon icon={faMapMarkerAlt} color={CPPTheme.lightblue}/> 
