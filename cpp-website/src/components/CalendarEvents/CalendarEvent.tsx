@@ -1,9 +1,12 @@
-import { Flex, Heading, Link as ChakraLink, Text } from "@chakra-ui/react";
+import { Flex, Heading, Link as ChakraLink, Text, AspectRatio } from "@chakra-ui/react";
 import type { calendarEvent } from "services/GoogleCalendarApi";
 
 import { CPPTheme } from "globals/CPPInfo";
-import { CalendarIcon } from "@chakra-ui/icons";
 import styled from '@emotion/styled';
+
+import DateBox from "./DateBox";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar, faClock, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 const StyledLink = styled(Text)`
   &:before {
@@ -27,40 +30,65 @@ const StyledLink = styled(Text)`
 
 const CalendarEvent = ({event}: {event : calendarEvent}) => {
 
-  const options: any = {
-    year: '2-digit',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit'
-  };
-
-  const get12hourTimeString = (day: Date) => {
-    return Intl.DateTimeFormat('en-us', options).format(day).split(" ").slice(1).join(" ");
-  }
-  
+  const startTime = new Date(event.start.date || event.start.dateTime || "");
+  const endTime = new Date(event.end.date || event.end.dateTime || "");
+  const allDay = event.start.date !== undefined
+  const sameDay = startTime.toLocaleDateString() === endTime.toLocaleDateString()
 
   return (
     <Flex justifyContent="left" w="100%">
-      <ChakraLink href={event.htmlLink} isExternal>
-        <CalendarIcon w={[0, 140]} h={[0, 140]} paddingRight={5} color={CPPTheme.blue}></CalendarIcon>
+      <ChakraLink href={event.htmlLink} style={{textDecoration: "none"}} isExternal>
+        <AspectRatio w={140} h={140} display={["none", "block"]} marginRight={5}>
+          <DateBox day={new Date(event.start.date || event.start.dateTime || "")}/>
+        </AspectRatio>
       </ChakraLink>
       <Flex flexDir="column">
         <ChakraLink href={event.htmlLink} isExternal>
           <StyledLink
-          display="inline-block" 
-          fontSize={['sm', 'md', 'lg', 'xl']}
-          position="relative"
-          color="white"
-          textDecoration="none">
+            display="inline-block" 
+            fontSize={['sm', 'md', 'lg', 'xl']}
+            position="relative"
+            color="white"
+            textDecoration="none"
+          >
             <Heading color={CPPTheme.lightblue}> {event.summary} </Heading>
           </StyledLink>
         </ChakraLink>
         <Text> {event.description} </Text>
-        <Text> {event.location} </Text>
-        <Text> {new Date(event.start.date || event.start.dateTime || "").toUTCString().split(" ").slice(0, 4).join(" ")} </Text>
-        <Text> {`${get12hourTimeString(new Date(event.start.date || event.start.dateTime || ""))} to ${get12hourTimeString(new Date(event.end.date || event.end.dateTime || ""))}`} </Text>
+        {event.location ?  
+          <Text> 
+            <FontAwesomeIcon icon={faMapMarkerAlt} color={CPPTheme.lightblue}/> 
+            {` ${event.location}`} 
+          </Text> 
+          : 
+          undefined
+        }
+        <Text>
+          <FontAwesomeIcon icon={faCalendar} color={CPPTheme.lightblue}/>
+          {sameDay ? 
+            ` ${startTime.toLocaleDateString('en-us', {year: 'numeric', day: 'numeric', month: 'long', weekday: 'long'})}`
+            :
+            ` ${startTime.toLocaleDateString('en-us', {year: 'numeric', day: 'numeric', month: 'long'})}
+              to
+              ${endTime.toLocaleDateString('en-us', {year: 'numeric', day: 'numeric', month: 'long'})}
+            `
+          } 
+        </Text>
+        <Text> 
+          <FontAwesomeIcon icon={faClock} color={CPPTheme.lightblue}/>
+          {allDay ? 
+            ` All Day`
+            :
+            (sameDay ?
+              ` ${startTime.toLocaleTimeString()} to ${endTime.toLocaleTimeString()}`
+              :
+              ` ${startTime.toLocaleDateString('en-us', {weekday: 'long'})}, ${startTime.toLocaleTimeString()} 
+                to 
+                ${endTime.toLocaleDateString('en-us', {weekday: 'long'})}, ${endTime.toLocaleTimeString()}
+              `
+            )
+          } 
+        </Text>
       </Flex>
     </Flex>
   )
