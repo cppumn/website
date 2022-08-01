@@ -1,0 +1,31 @@
+.normalHTML {
+  max-width: 100%;
+}
+
+.normalHTML ul {
+  margin: 10px;
+  margin-left: 40px;
+}
+
+.normalHTML ol {
+  margin: 10px;
+  margin-left: 40px;
+}
+
+.normalHTML a:link {
+  text-decoration: underline;
+  color: #0000EE;
+}
+
+.normalHTML a:link:hover {
+  text-decoration: underline;
+  color: #4444EE;
+}
+
+.normalHTML a:visited {
+  color: #551A8B;
+}
+
+.normalHTML a:visited:hover {
+  color: #854ABB;
+}
