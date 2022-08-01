@@ -1,8 +1,10 @@
-import { Flex, Heading, Link as ChakraLink, Text, AspectRatio } from "@chakra-ui/react";
+import { Flex, Heading, Link as ChakraLink, Text, AspectRatio, Box } from "@chakra-ui/react";
 import type { calendarEvent } from "services/GoogleCalendarApi";
 
 import { CPPTheme } from "globals/CPPInfo";
 import styled from '@emotion/styled';
+
+import "css/normalHTML.css"
 
 import DateBox from "./DateBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -53,7 +55,7 @@ const CalendarEvent = ({event}: {event : calendarEvent}) => {
             {event.summary}
           </StyledLink>
         </ChakraLink>
-        <Text className="normalLink" dangerouslySetInnerHTML={{__html: event.description || ""}} />
+        <Text overflow="hidden" className="normalHTML" dangerouslySetInnerHTML={{__html: event.description || ""}} />
         {event.location ?  
           <Text> 
             <FontAwesomeIcon icon={faMapMarkerAlt} color={CPPTheme.lightblue}/> 
