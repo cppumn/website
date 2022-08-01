@@ -1,4 +1,4 @@
-import { Flex, Heading, Link as ChakraLink, Text, AspectRatio, Box } from "@chakra-ui/react";
+import { Flex, Heading, Link as ChakraLink, Text, AspectRatio } from "@chakra-ui/react";
 import type { calendarEvent } from "services/GoogleCalendarApi";
 
 import { CPPTheme } from "globals/CPPInfo";
