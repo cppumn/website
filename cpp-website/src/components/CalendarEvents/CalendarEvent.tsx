@@ -4,6 +4,8 @@ import type { calendarEvent } from "services/GoogleCalendarApi";
 import { CPPTheme } from "globals/CPPInfo";
 import styled from '@emotion/styled';
 
+import "css/normalHTML.css"
+
 import DateBox from "./DateBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faClock, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
@@ -53,7 +55,7 @@ const CalendarEvent = ({event}: {event : calendarEvent}) => {
             {event.summary}
           </StyledLink>
         </ChakraLink>
-        <Text className="normalLink" dangerouslySetInnerHTML={{__html: event.description || ""}} />
+        <Text overflow="hidden" className="normalHTML" dangerouslySetInnerHTML={{__html: event.description || ""}} />
         {event.location ?  
           <Text> 
             <FontAwesomeIcon icon={faMapMarkerAlt} color={CPPTheme.lightblue}/> 
