@@ -77,7 +77,11 @@ const CalendarEvent = ({event}: {event : calendarEvent}) => {
         <Text> 
           <FontAwesomeIcon icon={faClock} color={CPPTheme.lightblue}/>
           {allDay ? 
-            ` All Day`
+            (sameDay ?
+              ` All Day`
+              :
+              ` All Day, ${startTime.toLocaleDateString('en-us', {weekday: 'long'})} through ${endTime.toLocaleDateString('en-us', {weekday: 'long'})}`
+            )
             :
             (sameDay ?
               ` ${startTime.toLocaleTimeString()} to ${endTime.toLocaleTimeString()}`
