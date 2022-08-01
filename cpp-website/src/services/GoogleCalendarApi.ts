@@ -41,7 +41,16 @@ class Calendar {
    */
   async getEvents(): Promise<{ items: calendarEvent[]; }> {
     const r = await fetch(this.url);
-    return r.json();
+    let data: any = await r.json();
+
+    // ensures time zone is correct
+    data.items = data.items?.map((event: calendarEvent) => {
+      if(event.start.date) { event.start.date = `${event.start.date}T00:00:00-05:00`; }
+      if(event.end.date) { event.end.date = `${event.end.date}T00:00:00-05:00`; }
+      return event;
+    });
+    
+    return data;
   }
 
   /** returns all events sorted by time
