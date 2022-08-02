@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react"
+import { theme, Flex, Text } from "@chakra-ui/react"
 import { CPPTheme } from "globals/CPPInfo"
 
 const DateBox = ({day, active}: {day: Date, active?: boolean}) => {
@@ -13,6 +13,7 @@ const DateBox = ({day, active}: {day: Date, active?: boolean}) => {
       borderTop={`solid 1rem ${color}`} 
       borderRadius={20}
       gap={1}
+      fontFamily={`${theme.fonts.body}, "Open Sans", sans-serif`}
     >
       <Text 
         textColor={color} 
