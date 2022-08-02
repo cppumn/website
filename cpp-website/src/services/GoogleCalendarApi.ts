@@ -34,7 +34,7 @@ class Calendar {
   cache: {items: calendarEvent[]} | null = null;
 
   constructor(config: {clientId: string, apiKey: string}) {
-    this.url = `https://www.googleapis.com/calendar/v3/calendars/${config.clientId}/events?key=${config.apiKey}`;
+    this.url = `https://www.googleapis.com/calendar/v3/calendars/${config.clientId}/events?key=${config.apiKey}&singleEvents=True`;
   }
 
   /** performs the API requerst and immdietaly returns data
