@@ -5,10 +5,6 @@ import { extendTheme } from "@chakra-ui/react";
 // default mono font: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
 
 const theme = extendTheme({
-  fonts: {
-    heading: `'Cedarville Cursive', cursive`,
-    body: `"Cedarville Cursive", cursive`
-  }
 });
 
 export default theme
