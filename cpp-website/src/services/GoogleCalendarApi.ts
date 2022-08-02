@@ -136,7 +136,7 @@ class Calendar {
     let events = d.items;
     let now = new Date();
     events = events.filter(e => {
-      let startDate = new Date(e.start.date || e.end.dateTime || "");
+      let startDate = new Date(e.start.date || e.start.dateTime || "");
       let endDate = new Date(e.end.date || e.end.dateTime || "");
       return startDate <= now && now <= endDate;
     });
