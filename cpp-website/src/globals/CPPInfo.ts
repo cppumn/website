@@ -1,7 +1,9 @@
 const CPPTheme = {
   lightblue: "#649bd3",
   blue: "#00599d",
-  darkblue: "#014284"
+  darkblue: "#014284",
+  lightgreen: "#3ec757",
+  green: "#21a300"
 };
 
 const email = "cpp@umn.edu"; // not an actual email... yet
