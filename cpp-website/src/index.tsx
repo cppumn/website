@@ -5,11 +5,15 @@ import reportWebVitals from './reportWebVitals';
 
 import { ChakraProvider } from '@chakra-ui/react'
 
+import theme from 'globals/theme';
+
+import '@fontsource/cedarville-cursive'
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
   <React.StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <App />
     </ChakraProvider>
   </React.StrictMode>
