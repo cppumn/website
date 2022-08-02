@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.48e96471.css",
-    "main.js": "/website/static/js/main.8a3577e4.js",
+    "main.css": "/website/static/css/main.1b14ab97.css",
+    "main.js": "/website/static/js/main.2c4b69a3.js",
     "static/js/787.68898001.chunk.js": "/website/static/js/787.68898001.chunk.js",
     "static/media/ClubLogo.png": "/website/static/media/ClubLogo.d92210963c6aa2459041.png",
+    "static/media/cedarville-cursive-all-400-normal.woff": "/website/static/media/cedarville-cursive-all-400-normal.973ddceff3782e0d359d.woff",
     "static/media/D2D-gld-wht@2x.png": "/website/static/media/D2D-gld-wht@2x.27761c77fcc80bd8d7b1.png",
+    "static/media/cedarville-cursive-latin-400-normal.woff2": "/website/static/media/cedarville-cursive-latin-400-normal.8b7975367086e15d5b16.woff2",
     "static/media/D2D-print.png": "/website/static/media/D2D-print.766aa302f5b53b7b2450.png",
     "static/media/D2D-gld-wht.png": "/website/static/media/D2D-gld-wht.aa2a919fdcf5af0af86e.png",
     "index.html": "/website/index.html",
-    "main.48e96471.css.map": "/website/static/css/main.48e96471.css.map",
-    "main.8a3577e4.js.map": "/website/static/js/main.8a3577e4.js.map",
+    "main.1b14ab97.css.map": "/website/static/css/main.1b14ab97.css.map",
+    "main.2c4b69a3.js.map": "/website/static/js/main.2c4b69a3.js.map",
     "787.68898001.chunk.js.map": "/website/static/js/787.68898001.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.48e96471.css",
-    "static/js/main.8a3577e4.js"
+    "static/css/main.1b14ab97.css",
+    "static/js/main.2c4b69a3.js"
   ]
 }
