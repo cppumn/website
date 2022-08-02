@@ -29,7 +29,9 @@ type calendarEvent = {
 }
 
 class Calendar {
+  
   url: string;
+  cache: {items: calendarEvent[]} | null = null;
 
   constructor(config: {clientId: string, apiKey: string}) {
     this.url = `https://www.googleapis.com/calendar/v3/calendars/${config.clientId}/events?key=${config.apiKey}`;
@@ -40,6 +42,8 @@ class Calendar {
    * @returns object returned from api call
    */
   async getEvents(): Promise<{ items: calendarEvent[]; }> {
+    if(this.cache) {return this.cache}
+
     const r = await fetch(this.url);
     let data: any = await r.json();
 
@@ -49,6 +53,9 @@ class Calendar {
       if(event.end.date) { event.end.date = `${event.end.date}T00:00:00-04:59`; }
       return event;
     });
+
+    this.cache = data;
+    setTimeout(() => { this.cache = null; }, 60000);
     
     return data;
   }
