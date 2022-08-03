@@ -5,6 +5,13 @@ import { extendTheme } from "@chakra-ui/react";
 // default mono font: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
 
 const theme = extendTheme({
+  fonts: {
+    heading: `"Ubuntu", sans-serif`,
+    body: `"Noto Sans", sans-serif`
+  },
+  fontWeights: {
+    body: 800
+  }
 });
 
 export default theme
