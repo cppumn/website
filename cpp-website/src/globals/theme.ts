@@ -8,9 +8,6 @@ const theme = extendTheme({
   fonts: {
     heading: `"Ubuntu", sans-serif`,
     body: `"Noto Sans", sans-serif`
-  },
-  fontWeights: {
-    body: 800
   }
 });
 
