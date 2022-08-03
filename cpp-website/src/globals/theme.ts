@@ -6,9 +6,9 @@ import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   fonts: {
-    heading: `'Cedarville Cursive', cursive`,
-    body: `"Cedarville Cursive", cursive`
-  }
+    heading: `"Ubuntu", sans-serif`,
+    body: `"Red Hat Text", sans-serif`
+  },
 });
 
 export default theme
