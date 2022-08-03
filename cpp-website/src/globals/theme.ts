@@ -7,8 +7,11 @@ import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
   fonts: {
     heading: `"Ubuntu", sans-serif`,
-    body: `"Red Hat Text", sans-serif`
+    body: `"Noto Sans", sans-serif`
   },
+  fontWeights: {
+    body: 800
+  }
 });
 
 export default theme

@@ -8,7 +8,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import theme from 'globals/theme';
 
 import '@fontsource/ubuntu'
-import "@fontsource/red-hat-text"
+import "@fontsource/noto-sans"
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
