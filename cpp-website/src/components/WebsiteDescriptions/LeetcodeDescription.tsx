@@ -1,0 +1,21 @@
+import { Flex, Image, Heading, Center, Text } from "@chakra-ui/react"
+
+import { CPPTheme } from "globals/CPPInfo"
+
+const logo = require("img/logos/LeetCode_logo_black512.png")
+
+const LeetcodeDescription = () => {
+  return (
+    <Flex gap={5}>
+      <Center w={128} h={128} p={2}>
+        <Image src={logo}/>
+      </Center>
+      <Flex flexDir="column">
+        <Heading fontSize={28}> LeetCode </Heading>
+        <Text> You have probably already heard of LeetCode, but in case you haven't, it is also an excellent resource...</Text>
+      </Flex>
+    </Flex>
+  )
+}
+
+export default LeetcodeDescription
