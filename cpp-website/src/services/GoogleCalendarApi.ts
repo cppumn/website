@@ -29,10 +29,12 @@ type calendarEvent = {
 }
 
 class Calendar {
+  
   url: string;
+  cache: {items: calendarEvent[]} | null = null;
 
   constructor(config: {clientId: string, apiKey: string}) {
-    this.url = `https://www.googleapis.com/calendar/v3/calendars/${config.clientId}/events?key=${config.apiKey}`;
+    this.url = `https://www.googleapis.com/calendar/v3/calendars/${config.clientId}/events?key=${config.apiKey}&singleEvents=True`;
   }
 
   /** performs the API requerst and immdietaly returns data
@@ -40,6 +42,8 @@ class Calendar {
    * @returns object returned from api call
    */
   async getEvents(): Promise<{ items: calendarEvent[]; }> {
+    if(this.cache) {return this.cache}
+
     const r = await fetch(this.url);
     let data: any = await r.json();
 
@@ -49,6 +53,9 @@ class Calendar {
       if(event.end.date) { event.end.date = `${event.end.date}T00:00:00-04:59`; }
       return event;
     });
+
+    this.cache = data;
+    setTimeout(() => { this.cache = null; }, 60000);
     
     return data;
   }
@@ -83,7 +90,7 @@ class Calendar {
     let events = d.items;
     let now = new Date();
     events = events.filter(e => {
-      let date = new Date(e[sort].date || e[sort].dateTime || "");
+      let date = new Date(e.start.date || e.start.dateTime || "");
       return date >= now;
     });
     events.sort((a, b): number => {
@@ -106,13 +113,37 @@ class Calendar {
     let events = d.items;
     let now = new Date();
     events = events.filter(e => {
-      let date = new Date(e[sort].date || e[sort].dateTime || "");
+      let date = new Date(e.end.date || e.end.dateTime || "");
       return date <= now;
     });
     events.sort((a, b): number => {
       let d1 = new Date(a[sort].date || a[sort].dateTime || "");
       let d2 = new Date(b[sort].date || b[sort].dateTime || "");
       return d2.getTime() - d1.getTime();
+    })
+    return howMany < 0 ? events : events.slice(0, howMany);
+  }
+
+  /** returns the current events as an array, sorted by earliest first
+   * 
+   * @param howMany max number of events to return, by default wil return all current events
+   * @param sort string, either "start" or "end" specifying which type to sort by, by default will sort by start time
+   * 
+   * @return array of calendarEvents
+   */
+   async getCurrentEvents(howMany: number = -1, sort: "start" | "end" = "start"): Promise<calendarEvent[]> {
+    const d = await this.getEvents();
+    let events = d.items;
+    let now = new Date();
+    events = events.filter(e => {
+      let startDate = new Date(e.start.date || e.start.dateTime || "");
+      let endDate = new Date(e.end.date || e.end.dateTime || "");
+      return startDate <= now && now <= endDate;
+    });
+    events.sort((a, b): number => {
+      let d1 = new Date(a[sort].date || a[sort].dateTime || "");
+      let d2 = new Date(b[sort].date || b[sort].dateTime || "");
+      return d1.getTime() - d2.getTime();
     })
     return howMany < 0 ? events : events.slice(0, howMany);
   }

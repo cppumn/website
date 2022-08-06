@@ -2,7 +2,7 @@ import { Box, Stack } from "@chakra-ui/react";
 import NavItem from "./NavItem";
 
 type NavLinksProps = {
-  isOpen: boolean
+  isOpen: boolean;
 };
 
 const NavLinks = ({ isOpen }: NavLinksProps) => {
