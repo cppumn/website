@@ -6,11 +6,9 @@ const logo = require("img/logos/codechef_logo512.png")
 
 const CodechefDescription = () => {
   return (
-    <Flex gap={5}>
-      <Center w={128} h={128} p={2}>
-        <Image src={logo} />
-      </Center>
-      <Flex flexDir="column">
+    <Flex gap={[0, 5]} flexDir={["column", "row"]} alignItems="center">
+      <Image boxSize={128} src={logo}/>
+      <Flex flexDir="column" w="100%">
         <Heading fontSize={28}> CodeChef </Heading>
         <Text> Do I even have to say it...</Text>
       </Flex>
