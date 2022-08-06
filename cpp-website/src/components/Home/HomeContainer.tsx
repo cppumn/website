@@ -1,12 +1,18 @@
 import { Flex } from "@chakra-ui/react";
+import { ReactNode } from "react";
 
-const HomeContainer = ({ children, ...props }: any) => {
+type HomeContainerProps = {
+  children: ReactNode;
+  props?: any;
+};
+
+const HomeContainer = ({ children, ...props }: HomeContainerProps) => {
   return (
     <Flex
       flexDirection="column"
       maxW={1024} 
       m="auto" 
-      p={5}
+      p={2}
       gap={6}
       {...props}
     >

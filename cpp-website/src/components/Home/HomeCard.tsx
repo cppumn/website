@@ -1,25 +1,32 @@
-import { Flex, Stack, Box, Heading, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
+import { IconDefinition } from "@fortawesome/fontawesome-common-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CPPTheme } from "globals/CPPInfo";
 
-const HomeCard = ({ title, desc, icon, color, ...props }: any) => {
+type HomeCardProps = {
+  title: string;
+  desc: string;
+  icon: IconDefinition;
+  props?: any;
+};
+
+const HomeCard = ({ title, desc, icon, ...props }: HomeCardProps) => {
   return (
     <Flex
+      flexDirection="column"
       gap={2}
+      p={4}
+      borderRadius="1.5rem"
+      bg={CPPTheme.blue}
       {...props}
-      w="80%"
     >
-      <Box flex="1 1 auto">
-        <FontAwesomeIcon icon={icon} color={CPPTheme.lightblue} style={{
-          display: "inline-block",
-          width: "100%",
-          height: "100%"
-        }} />
-      </Box>
-      <Stack flex="1 1 auto">
-        <Heading fontSize="1.25rem" fontWeight={450} color={CPPTheme.blue}>{title}</Heading>
-        <Text>{desc}</Text>
-      </Stack>
+      <Flex
+        gap="0.5rem"
+      >
+        <Heading fontSize="1.25rem" fontWeight={450} color='white'>{title}</Heading>
+        <FontAwesomeIcon icon={icon} color='violet' size="lg"/>
+      </Flex>
+      <Text color='white'>{desc}</Text>
     </Flex>
   );
 }
