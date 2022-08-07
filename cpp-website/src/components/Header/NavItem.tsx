@@ -24,11 +24,11 @@ const StyledLink = styled(Text)`
 `;
 
 type NavItemProps = {
-  content: string,
-  path: string
+  content: string;
+  path: string;
 };
 
-const NavItem = ({content, path}: NavItemProps) => {
+const NavItem = ({ content, path }: NavItemProps) => {
   return (
     <Link to={path}>
       <StyledLink 
