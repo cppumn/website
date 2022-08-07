@@ -1,8 +1,12 @@
 import { Flex } from "@chakra-ui/react";
 import { CPPTheme } from "globals/CPPInfo";
+import { ReactNode } from "react";
 
+type NavContainerProps = {
+  children: ReactNode;
+};
 
-const NavContainer = ({ children }: any) => {
+const NavContainer = ({ children }: NavContainerProps) => {
   return (
     <Flex
       as="nav"
