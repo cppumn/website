@@ -1,15 +1,11 @@
 {
   "files": {
     "main.css": "/website/static/css/main.5b3ce5c9.css",
-    "main.js": "/website/static/js/main.0ca0c3fb.js",
+    "main.js": "/website/static/js/main.e9bd77c0.js",
     "static/js/787.68898001.chunk.js": "/website/static/js/787.68898001.chunk.js",
     "static/media/noto-sans-all-400-normal.woff": "/website/static/media/noto-sans-all-400-normal.52416d7072271c0422c4.woff",
-    "static/media/Kattis512_square.png": "/website/static/media/Kattis512_square.02f43ae4c8ee13472d2a.png",
     "static/media/ubuntu-all-400-normal.woff": "/website/static/media/ubuntu-all-400-normal.8629f83ad2c45e75a914.woff",
     "static/media/ClubLogo.png": "/website/static/media/ClubLogo.d92210963c6aa2459041.png",
-    "static/media/LeetCode_logo_black512.png": "/website/static/media/LeetCode_logo_black512.901644bbaff07312a09c.png",
-    "static/media/codechef_logo512.png": "/website/static/media/codechef_logo512.02366a6b8f5e3934b8df.png",
-    "static/media/Codeforces_logo512_square.png": "/website/static/media/Codeforces_logo512_square.eedf0e67685753abdf33.png",
     "static/media/ubuntu-latin-ext-400-normal.woff2": "/website/static/media/ubuntu-latin-ext-400-normal.9967dbf10fc3cb92edfb.woff2",
     "static/media/noto-sans-devanagari-400-normal.woff2": "/website/static/media/noto-sans-devanagari-400-normal.b7662f94b361e5dfba07.woff2",
     "static/media/ubuntu-latin-400-normal.woff2": "/website/static/media/ubuntu-latin-400-normal.2f02effe392a63dc07a5.woff2",
@@ -29,11 +25,11 @@
     "static/media/noto-sans-vietnamese-400-normal.woff2": "/website/static/media/noto-sans-vietnamese-400-normal.7ac08f5e4dcd5da42613.woff2",
     "index.html": "/website/index.html",
     "main.5b3ce5c9.css.map": "/website/static/css/main.5b3ce5c9.css.map",
-    "main.0ca0c3fb.js.map": "/website/static/js/main.0ca0c3fb.js.map",
+    "main.e9bd77c0.js.map": "/website/static/js/main.e9bd77c0.js.map",
     "787.68898001.chunk.js.map": "/website/static/js/787.68898001.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5b3ce5c9.css",
-    "static/js/main.0ca0c3fb.js"
+    "static/js/main.e9bd77c0.js"
   ]
 }
