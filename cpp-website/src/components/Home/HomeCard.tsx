@@ -22,6 +22,8 @@ const HomeCard = ({ title, desc, icon, ...props }: HomeCardProps) => {
     >
       <Flex
         gap="0.5rem"
+        justifyContent="space-between"
+        alignItems="center"
       >
         <Heading fontSize="1.25rem" fontWeight={450} color='white'>{title}</Heading>
         <FontAwesomeIcon icon={icon} color='violet' size="lg"/>
