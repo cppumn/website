@@ -1,8 +1,44 @@
 import { SimpleGrid, Stack, Heading, Text, AspectRatio } from "@chakra-ui/react";
+import { faPeopleGroup, faTrophy, faChalkboard, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import HomeContainer from "components/Home/HomeContainer";
 import HomeSection from "components/Home/HomeSection";
 import HomeCard from "components/Home/HomeCard";
-import { CPPTheme, CPPMainCards } from "globals/CPPInfo";
+import { CPPTheme } from "globals/CPPInfo";
+
+const CPPMainCards = [
+  {
+    title: "Collaboration",
+    desc: `
+        We provide sessions for members to help each other progress
+        through the toughest problems they are confronted with.
+      `,
+    icon: faPeopleGroup
+  },
+  {
+    title: "Lectures",
+    desc: `
+        Lectures are ran by experienced competitive programmers
+        where we dive into challenging computer science topics.
+      `,
+    icon: faChalkboard
+  },
+  {
+    title: "Contests",
+    desc: `
+        We host practice contests where beginning programmers
+        to top competitors can compete at differently levels.
+      `,
+    icon: faTrophy
+  },
+  {
+    title: "Events",
+    desc: `
+        Seminars, conferences, and meetups are scheduled to 
+        interact with the broader computer science.
+      `,
+    icon: faCalendar
+  }
+]
 
 const MainPage = () => {
   const activities = CPPMainCards.map(entry => {
