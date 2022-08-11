@@ -2,7 +2,7 @@ import { Heading, Text } from "@chakra-ui/react"
 
 import DescriptionContainer from "./DescriptionContainer"
 
-const logo = require("img/logos/Kattis512_square.png")
+const logo = require("img/logos/Kattis_desk512.png")
 
 const KattisDescription = () => {
   return (
