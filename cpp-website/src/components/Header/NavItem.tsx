@@ -1,27 +1,5 @@
 import { Link } from "react-router-dom";
-import { Text } from "@chakra-ui/react";
-import styled from '@emotion/styled';
-
-
-const StyledLink = styled(Text)`
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: #0087ca;
-    bottom: 0;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
-  }
-  &:hover:before {
-    transform-origin: left;
-    transform: scaleX(1);
-  }
-`;
+import { UnderlinedText } from "globals/styledComponents";
 
 type NavItemProps = {
   content: string;
@@ -31,15 +9,16 @@ type NavItemProps = {
 const NavItem = ({ content, path }: NavItemProps) => {
   return (
     <Link to={path}>
-      <StyledLink 
+      <UnderlinedText 
         display="inline-block" 
         fontSize={['sm', 'md', 'lg', 'xl']}
         position="relative"
+        linecolor="#0087ca"
         color="white"
         textDecoration="none"
       >
         {content}
-      </StyledLink>
+      </UnderlinedText>
     </Link>
   );
 }
