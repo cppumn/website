@@ -1,16 +1,20 @@
-import { Heading, Text } from "@chakra-ui/react"
+import Description from "./Description";
 
-import DescriptionContainer from "./DescriptionContainer"
-
-const logo = require("img/logos/Codeforces_logo512_square.png")
+const logo = require("img/logos/Codeforces_logo512_square.png");
+const url = "https://codeforces.com/";
 
 const CodeforcesDescription = () => {
   return (
-    <DescriptionContainer icon={logo}>
-      <Heading fontSize="1.25rem" fontWeight={450}> Codeforces </Heading>
-      <Text> Codeforces is also an excellent resource...</Text>
-    </DescriptionContainer>
-  )
-}
+    <Description 
+      logo={logo} 
+      url={url}
+      title="Codeforces"
+      text="
+        Codeforces is a massively popular website that hosts weekly two-and-a-half hour long programming contests that you can compete in online.
+        They also keep an archive of all their past problems and users can practice them anytime.
+      "
+    />
+  );
+};
 
-export default CodeforcesDescription
+export default CodeforcesDescription;
