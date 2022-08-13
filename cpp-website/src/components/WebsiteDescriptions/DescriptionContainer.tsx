@@ -5,7 +5,7 @@ import { CPPTheme } from "globals/CPPInfo";
 const DescriptionContainer = ({ children, icon, url }: any) => {
   return (
     <Flex gap={[0, 5]} flexDir={["column", "row"]} alignItems="center" background={CPPTheme.blue} p={5} borderRadius={20}>
-      <Box w={128} h={128} mb={-5}>
+      <Box minW={128} maxW={128}>
         <ChakraLink href={url} isExternal>
           <Image src={icon}/>
         </ChakraLink>
