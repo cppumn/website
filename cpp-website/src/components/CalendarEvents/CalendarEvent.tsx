@@ -1,8 +1,8 @@
-import { Flex, Heading, Link as ChakraLink, Text, AspectRatio } from "@chakra-ui/react";
+import { Flex, Link as ChakraLink, Text, AspectRatio } from "@chakra-ui/react";
+import { UnderlinedHeading } from "globals/styledComponents";
 import type { calendarEvent } from "services/GoogleCalendarApi";
 
 import { CPPTheme } from "globals/CPPInfo";
-import styled from '@emotion/styled';
 
 import "css/normalHTML.css"
 
@@ -22,26 +22,6 @@ const CalendarEvent = ({event}: {event : calendarEvent}) => {
 
   const lightColor = current ? CPPTheme.lightgreen : CPPTheme.lightblue;
 
-  const StyledLink = styled(Heading)`
-    &:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 4px;
-      border-radius: 4px;
-      background-color: ${lightColor};
-      bottom: 0;
-      left: 0;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform .3s ease-in-out;
-    }
-    &:hover:before {
-      transform-origin: left;
-      transform: scaleX(1);
-    }
-  `;
-
   return (
     <Flex justifyContent="left" w="100%">
 
@@ -54,14 +34,14 @@ const CalendarEvent = ({event}: {event : calendarEvent}) => {
       <Flex flexDir="column">
 
         <ChakraLink href={event.htmlLink} isExternal>
-          <StyledLink
+          <UnderlinedHeading
             display="inline-block" 
             position="relative"
             color={lightColor}
             textDecoration="none"
           >
             {event.summary}
-          </StyledLink>
+          </UnderlinedHeading>
         </ChakraLink>
 
         {current ?
@@ -118,7 +98,7 @@ const CalendarEvent = ({event}: {event : calendarEvent}) => {
         
       </Flex>
     </Flex>
-  )
+  );
 };
 
 export default CalendarEvent;
