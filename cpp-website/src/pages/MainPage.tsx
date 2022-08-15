@@ -26,7 +26,7 @@ const CPPMainCards = [
     title: "Contests",
     desc: `
         We host practice contests where beginning programmers
-        to top competitors can compete at differently levels.
+        to top competitors can compete at different levels.
       `,
     icon: faTrophy
   },
@@ -34,7 +34,7 @@ const CPPMainCards = [
     title: "Events",
     desc: `
         Seminars, conferences, and meetups are scheduled to 
-        interact with the broader computer science.
+        interact with the broader computer science community.
       `,
     icon: faCalendar
   }
@@ -54,7 +54,7 @@ const MainPage = () => {
           in competitive programming. Our goal is to create an environment
           where students can hone their speed and accuracy in solving 
           challenging problems, learn new programming concepts, and prepare
-          for competitions and interviews. Our club consist of the following activities:
+          for competitions and interviews. Our club consists of the following activities:
         </Text>
         <SimpleGrid columns={[1, 2, 2, 4]} spacing={6}>
           {activities}
@@ -70,18 +70,18 @@ const MainPage = () => {
                 of Minnesota Student Hub. This is a great place to interact with existing
                 or new members to the club. You can join through the widget
                 on the page. We also have a email you can directly contact through the contact
-                page or on the icon in the footer.
+                page.
               </Text>
               <Heading color={CPPTheme.blue} fontSize="1rem" fontWeight={450}>Check Our Schedule</Heading>
               <Text >
-                Visit the schedule page! Its a great place to view when our events and 
+                Visit the schedule page! It's a great place to view when our events and 
                 meetings are and where they are being hosted.
               </Text>
               <Heading color={CPPTheme.blue} fontSize="1rem" fontWeight={450}>Where to Start</Heading>
               <Text>
-                We think a great place to begin on what to cover and some tools that can help is our 
+                A great place to begin on what to cover and some tools that can help is our 
                 Getting Started page. The guide provided there has been setup by the experienced 
-                competitive programmers in our commmunity and is a great place to begin.
+                competitive programmers in our commmunity and is a fantastic resource for newcomers.
               </Text>
           </Stack>
         </Stack>
