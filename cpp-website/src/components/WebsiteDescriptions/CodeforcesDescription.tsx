@@ -10,8 +10,9 @@ const CodeforcesDescription = () => {
       url={url}
       title="Codeforces"
       text="
-        Codeforces is a massively popular website that hosts weekly two-and-a-half hour long programming contests that you can compete in online.
-        They also keep an archive of all their past problems and users can practice them anytime.
+        A massively popular website that hosts multiple two-and-a-half hour long programming contests a week. 
+        The competitions have a wide range of difficulties with div. 4 or 3 contests being the most beginner friendly so don't be afraid to give them a shot.
+        They also keep an archive of all their past problems and users can practice them at anytime.
       "
     />
   );
