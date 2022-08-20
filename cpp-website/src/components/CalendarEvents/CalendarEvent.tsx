@@ -35,7 +35,7 @@ const CalendarEvent = ({event}: {event : calendarEvent}) => {
 
         <ChakraLink href={event.htmlLink} isExternal>
           <UnderlinedHeading
-            display="inline-block" 
+            display="inline-block"
             position="relative"
             color={lightColor}
             textDecoration="none"
