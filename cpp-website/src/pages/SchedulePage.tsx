@@ -37,11 +37,11 @@ const SchedulePage = () => {
         Schedule
       </Heading>  
       <Text>
-        Don't miss any of our meetings or other sessions by following our&nbsp;
+        Don't miss any of our meetings or other sessions by following our {" "}
         <ChakraLink href={CPPCalendarConfig.publicUrl} color={CPPTheme.blue} isExternal>
           calendar!
         </ChakraLink> 
-        &nbsp;Here's a preview or our upcoming events:
+        {" "} Here's a preview or our upcoming events:
       </Text>
       <Center w="100%">
         { events.length === 0 ?
