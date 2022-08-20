@@ -12,7 +12,7 @@ import CalendarEventList from "components/CalendarEvents/CalendarEventList";
 
 const SchedulePage = () => {
 
-  const [events, setEvents] = useState<calendarEvent[]>([]);
+  const [events, setEvents] = useState<calendarEvent[] | undefined>(undefined);
 
   useEffect(() => {
     const cal = new Calendar(CPPCalendarConfig);
@@ -44,7 +44,7 @@ const SchedulePage = () => {
         {" "} Here's a preview or our upcoming events:
       </Text>
       <Center w="100%">
-        { events.length === 0 ?
+        { events ? events.length === 0 ?
           <Text fontSize="1.5rem">
             <FontAwesomeIcon icon={faCircleExclamation} color="#dd0000"/>
             &nbsp; It looks like there are no more upcoming events &nbsp;
@@ -52,6 +52,8 @@ const SchedulePage = () => {
           </Text>
           :
           <CalendarEventList events={events}/>
+          :
+          undefined
         }
       </Center>
     </Flex>
