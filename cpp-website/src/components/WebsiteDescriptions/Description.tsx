@@ -13,6 +13,7 @@ const Description = ({ logo, url, title, text}: any) => {
           fontSize="1.25rem"
           fontWeight={450}
           color="white"
+          thickness={3}
         > 
           {title} 
         </UnderlinedHeading>
