@@ -11,7 +11,7 @@ const GettingStartedPage = () => {
     <Flex 
       maxW={1024}
       m="auto"
-      p={5}
+      p={2}
       flexDir="column"
       gap={4}
     >
