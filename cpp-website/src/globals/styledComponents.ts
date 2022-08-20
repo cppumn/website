@@ -7,9 +7,9 @@ const UnderlinedText = styled(Text)`
     content: '';
     position: absolute;
     width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: ${props => props.linecolor || props.color};
+    height: ${props => props.thickness ? `${props.thickness}${typeof props.thickness === "number" ? 'px' : ''}` : "4px"};
+    border-radius: ${props => props.thickness ? `${props.thickness}${typeof props.thickness === "number" ? 'px' : ''}` : "4px"};
+    background-color: ${props => props.linecolor || props.color || "black"};
     bottom: 0;
     left: 0;
     transform-origin: right;
@@ -27,9 +27,9 @@ const UnderlinedHeading = styled(Heading)`
     content: '';
     position: absolute;
     width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: ${props => props.linecolor || props.color};
+    height: ${props => props.thickness ? `${props.thickness}${typeof props.thickness === "number" ? 'px' : ''}` : "4px"};
+    border-radius: ${props => props.thickness ? `${props.thickness}${typeof props.thickness === "number" ? 'px' : ''}` : "4px"};
+    background-color: ${props => props.linecolor || props.color || "black"};
     bottom: 0;
     left: 0;
     transform-origin: right;
