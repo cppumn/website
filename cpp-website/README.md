@@ -35,7 +35,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Builds the app and deploys it to the `gh-pages` branch. Requires admin permissions on this repo, otherwise you won't be able to push to that branch.
 
-You do NOT need to run `npm run build` first as this command already takes care of building
+You do __NOT__ need to run `npm run build` first as this command already takes care of building
 
 ## Learn More
 
