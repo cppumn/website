@@ -23,4 +23,4 @@ All of the required tools can be easily installed with Node Package Manager (`np
     ```bash
     npm install
     ```
-After this, you should be done! The `README.md` in the `cpp-website` directory will give you more information on running and deploying the site.
+After this, you should be done with all the installation! The `README.md` in the `cpp-website` directory will give you more information on running and deploying the site.
