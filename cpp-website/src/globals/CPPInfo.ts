@@ -12,9 +12,9 @@ const discordInvite = "https://discord.gg/6Cyr7K9Sfk";
 const logo = require("img/logos/ClubLogo.png");
 
 const CPPCalendarConfig = {
-  clientId: "c_04skom520lh4t0kium9qg1r1vg@group.calendar.google.com",
-  apiKey: "AIzaSyAASW9GZYCIxKLVjS8wEJ1tP-oNW3028eE",
-  publicUrl: "https://calendar.google.com/calendar/u/0?cid=Y18wNHNrb201MjBsaDR0MGtpdW05cWcxcjF2Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+  clientId: "c_j2lhsi7v0d16nthpt755al66e4@group.calendar.google.com",
+  apiKey: "AIzaSyDLmP-Pr9vQ-ksRB3VcRXk-v2jWuH75Ozg",
+  publicUrl: "https://calendar.google.com/calendar/u/0?cid=Y19qMmxoc2k3djBkMTZudGhwdDc1NWFsNjZlNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
 }
 
 export {CPPTheme, email, githubOrg, discordInvite, logo, CPPCalendarConfig};
