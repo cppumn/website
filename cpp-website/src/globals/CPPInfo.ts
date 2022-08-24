@@ -6,7 +6,7 @@ const CPPTheme = {
   green: "#136e01"
 };
 
-const email = "cpp@umn.edu"; // not an actual email... yet
+const email = "cpp-club@umn.edu";
 const githubOrg = "https://github.com/cppumn";
 const discordInvite = "https://discord.gg/6Cyr7K9Sfk";
 const logo = require("img/logos/ClubLogo.png");
