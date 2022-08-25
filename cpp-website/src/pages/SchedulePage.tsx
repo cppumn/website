@@ -1,9 +1,9 @@
 import { Center, Flex, Heading, Text, Link as ChakraLink } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { UnderlinedText } from "globals/styledComponents";
 
 import { Calendar, calendarEvent } from "services/GoogleCalendarApi";
 import { CPPCalendarConfig, CPPTheme } from "globals/CPPInfo";
+import MeetingsTable from "components/MeetingsTable";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
@@ -34,7 +34,16 @@ const SchedulePage = () => {
       gap={4}
     >
       <Heading color={CPPTheme.darkblue} fontSize="1.5rem" fontWeight={450}>
-        Schedule
+        Meetings
+      </Heading>  
+      <Text>
+        We meet twice a week and our meeting information can be found below.
+        Our meetings are generally open to people with all levels of experience.
+        Occasionally, a meeting might be split in a beginner and advanced section if the topic is too difficult.
+      </Text>
+      <MeetingsTable/>
+      <Heading color={CPPTheme.darkblue} fontSize="1.5rem" fontWeight={450}>
+        Calendar
       </Heading>  
       <Text>
         Don't miss any of our meetings or other sessions by following our {" "}
