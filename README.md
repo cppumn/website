@@ -30,3 +30,4 @@ After this, you should be done with all the installation! The `README.md` in the
 Check out the following pages for further documentation about the website:
 
 * [File Structure](docs/FileStructure.md)
+* [Running and Deploying](cpp-website/README.md)
