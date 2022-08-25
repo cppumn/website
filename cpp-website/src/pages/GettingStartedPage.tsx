@@ -9,7 +9,12 @@ import LeetcodeDescription from "components/WebsiteDescriptions/LeetcodeDescript
 const Topics = [
   "Graphs",
   "Dynamic Programming",
-  "..."
+  "Greedy",
+  "Number Theory",
+  "Geometry",
+  "Data Structures",
+  "Strings",
+  "Simulation"
 ]
 
 const GettingStartedPage = () => {
@@ -52,7 +57,6 @@ const GettingStartedPage = () => {
       <Text>
         Here's a list of topics that often come up in programming competitions.
         Don't worry if you don't know some of these since we will be covering most of them during our meetings.
-        Regardless, it would be useful for you to familiarize yourself with these topics:
       </Text>
       <UnorderedList>
         {
