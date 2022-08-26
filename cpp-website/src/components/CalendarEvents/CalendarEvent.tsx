@@ -86,11 +86,11 @@ const CalendarEvent = ({event}: {event : calendarEvent}) => {
             )
             :
             (sameDay ?
-              ` ${startTime.toLocaleTimeString()} to ${endTime.toLocaleTimeString()}`
+              ` ${startTime.toLocaleTimeString('en-us', {hour: 'numeric', minute:'2-digit'})} to ${endTime.toLocaleTimeString('en-us', {hour: 'numeric', minute:'2-digit'})}`
               :
-              ` ${startTime.toLocaleDateString('en-us', {weekday: 'long'})}, ${startTime.toLocaleTimeString()} 
+              ` ${startTime.toLocaleDateString('en-us', {weekday: 'long'})}, ${startTime.toLocaleTimeString('en-us', {hour: 'numeric', minute:'2-digit'})} 
                 to 
-                ${endTime.toLocaleDateString('en-us', {weekday: 'long'})}, ${endTime.toLocaleTimeString()}
+                ${endTime.toLocaleDateString('en-us', {weekday: 'long'})}, ${endTime.toLocaleTimeString('en-us', {hour: 'numeric', minute:'2-digit'})}
               `
             )
           } 
