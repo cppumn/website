@@ -55,15 +55,6 @@ const CalendarEvent = ({event}: {event : calendarEvent}) => {
 
         <Text overflow="hidden" className="normalHTML" dangerouslySetInnerHTML={{__html: event.description || ""}} />
 
-        {event.location ?  
-          <Text> 
-            <FontAwesomeIcon icon={faMapMarkerAlt} color={lightColor}/> 
-            {` ${event.location}`} 
-          </Text> 
-          : 
-          undefined
-        }
-
         <Text>
           <FontAwesomeIcon icon={faCalendar} color={lightColor}/>
           {sameDay ? 
@@ -95,6 +86,15 @@ const CalendarEvent = ({event}: {event : calendarEvent}) => {
             )
           } 
         </Text>
+
+        {event.location ?  
+          <Text> 
+            <FontAwesomeIcon icon={faMapMarkerAlt} color={lightColor}/> 
+            {` ${event.location}`} 
+          </Text> 
+          : 
+          undefined
+        }
         
       </Flex>
     </Flex>
