@@ -1,21 +1,12 @@
-import { Flex, Heading, ListItem, Text, UnorderedList } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 
 import { CPPTheme } from "globals/CPPInfo";
+
+import TopicsList from "components/TopicCards/TopicsList";
 
 import CodeforcesDescription from "components/WebsiteDescriptions/CodeforcesDescription";
 import KattisDescription from "components/WebsiteDescriptions/KattisDescription";
 import LeetcodeDescription from "components/WebsiteDescriptions/LeetcodeDescription";
-
-const Topics = [
-  "Graphs",
-  "Dynamic Programming",
-  "Greedy",
-  "Number Theory",
-  "Geometry",
-  "Data Structures",
-  "Strings",
-  "Simulation"
-]
 
 const GettingStartedPage = () => {
   return (
@@ -58,15 +49,7 @@ const GettingStartedPage = () => {
         Here's a list of topics that often come up in programming competitions.
         Don't worry if you don't know some of these since we will be covering most of them during our meetings.
       </Text>
-      <UnorderedList>
-        {
-          Topics.map(t => 
-            <ListItem> 
-              {t} 
-            </ListItem>  
-          )
-        }
-      </UnorderedList>
+      <TopicsList />
     </Flex>
   );
 };
