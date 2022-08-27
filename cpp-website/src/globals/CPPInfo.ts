@@ -8,6 +8,7 @@ const CPPTheme = {
 
 const email = "cpp-club@umn.edu";
 const githubOrg = "https://github.com/cppumn";
+const instagram = "https://instagram.com/umncpp"
 const discordInvite = "https://discord.gg/6Cyr7K9Sfk";
 const logo = require("img/logos/ClubLogo.png");
 
@@ -17,4 +18,4 @@ const CPPCalendarConfig = {
   publicUrl: "https://calendar.google.com/calendar/u/0?cid=Y19qMmxoc2k3djBkMTZudGhwdDc1NWFsNjZlNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
 }
 
-export {CPPTheme, email, githubOrg, discordInvite, logo, CPPCalendarConfig};
+export {CPPTheme, email, githubOrg, instagram, discordInvite, logo, CPPCalendarConfig};
