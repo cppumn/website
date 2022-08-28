@@ -1,5 +1,6 @@
 import { Box, Image } from "@chakra-ui/react";
-import { icpcTeam } from "globals/CPPInfo";
+import { icpcTeam, 
+ } from "globals/CPPInfo";
 
 type HeroImagesProps = {
   props?: any;
@@ -9,26 +10,22 @@ type HeroImagesProps = {
 const HeroImages = (props: HeroImagesProps) => {
   return (
     <Box 
-      display={["none", "none", "block", "block", "block"]}
-      width="700px"
-      height="500px"
+      display={["none", "none", "none", "grid"]}
+      width="800px"
+      gridTemplateRows="1fr"
       position="relative"
       {...props}
     >
       <Image
         src={icpcTeam}
-        width="80%"
-        top="0"
-        right="0"
-        position="absolute"
+        gridColumn="2 / span 2"
+        gridRow="1 / span 2"
         borderRadius="22px"
       />
       <Image
         src={icpcTeam}
-        width="80%"
-        left="0"
-        bottom="0"
-        position="absolute"
+        gridColumn="1 / span 2"
+        gridRow="2 / span 2"
         borderRadius="22px"
       />
     </Box>

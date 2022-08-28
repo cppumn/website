@@ -9,7 +9,7 @@ type HeroContainerProps = {
 const HeroContainer = ({ children, ...props }: HeroContainerProps) => {
   return (
     <Flex 
-      height="75vh" 
+      height="100vh" 
       position="relative"
       overflow="hidden"
       {...props}

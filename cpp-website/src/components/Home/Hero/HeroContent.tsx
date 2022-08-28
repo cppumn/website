@@ -1,35 +1,45 @@
-import { Flex, Stack, Button, Heading, Text } from "@chakra-ui/react";
+import { Flex, Stack, Button, Heading, Text, keyframes } from "@chakra-ui/react";
 import HeroImages from "./HeroImages";
 import { CPPTheme } from "globals/CPPInfo";
 
 type HeroContentProps = {
-  props?: any;
-};
+  props?: any
+}
+const slide = keyframes`
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`;
 
 // Might want to show the center of the board as the screen shrinks
-const HeroContent = (props: HeroContentProps) => {
+const HeroContent = (props: any) => {
   return (
-    <Flex         
-      justifyContent="space-evenly"
+    <Flex  
+      position="absolute"       
+      justify="space-evenly"
       alignItems="center"
-      position="absolute"
+      gap="2rem"
       width="full"
       height="full"
       color="white"
-      p="1rem"
+      p="2rem"
       {...props}
     >
       <Stack
-        justify="center"  
+        justify="center" 
         spacing="1rem"
+        animation={`1s ease-out 0s 1 ${slide}`}
       >
-        <Text fontSize={["0.8rem", "1rem", "1rem", "1rem"]}> 
+        <Text fontSize="1rem"> 
           University of Minnesota’s 
         </Text>
-        <Heading fontSize={["1.5rem", "1.5rem", "2rem", "3rem"]}>
+        <Heading fontSize={["2rem", "2rem", "2rem", "3rem"]}>
           Competitive Programming Club
         </Heading>
-        <Text fontSize={["1rem", "1.5rem", "1.5rem", "1.5rem"]}>
+        <Text fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5em"]}>
           From collaborating on contests to helping with coding interviews,
           we've got it all.
         </Text>
@@ -37,10 +47,8 @@ const HeroContent = (props: HeroContentProps) => {
           <Button 
             bg={CPPTheme.darkblue}
             borderRadius="2rem"
-            width={["100px", "150px", "200px", "200px"]}
-            fontSize={["1rem", "1.5rem", "1.5rem", "1.5rem"]}
-            height="50px"
-            p={8}
+            fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5em"]}
+            p={["0.8rem", "1rem", "1.5rem", "2rem"]}
             _hover={{
               bg: "white",
               color: CPPTheme.darkblue
@@ -48,13 +56,12 @@ const HeroContent = (props: HeroContentProps) => {
           >
             Join The Club
           </Button>
-          <Button 
+          <Button
+            onClick={() => props.scroll.current.scrollIntoView({ behavior: 'smooth', block: 'start' })} 
             variant="outline"
             borderRadius="2rem"
-            width={["100px", "150px", "200px", "200px"]}
-            fontSize={["1rem", "1.5rem", "1.5rem", "1.5rem"]}
-            height="50px"
-            p={8}
+            fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5em"]}
+            p={["0.8rem", "1rem", "1.5rem", "2rem"]}
             _hover={{
               bg: "white",
               color: CPPTheme.darkblue
@@ -66,7 +73,7 @@ const HeroContent = (props: HeroContentProps) => {
       </Stack>
       <HeroImages />
     </Flex>
-  )
+  );
 }
 
 export default HeroContent;

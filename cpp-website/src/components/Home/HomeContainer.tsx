@@ -10,8 +10,6 @@ const HomeContainer = ({ children, ...props }: HomeContainerProps) => {
   return (
     <Flex
       flexDirection="column"
-      m="auto" 
-      gap={6}
       {...props}
     >
       {children}

@@ -20,8 +20,4 @@ const CPPCalendarConfig = {
   publicUrl: "https://calendar.google.com/calendar/u/0?cid=Y19qMmxoc2k3djBkMTZudGhwdDc1NWFsNjZlNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
 }
 
-<<<<<<< HEAD
-export {CPPTheme, email, githubOrg, discordInvite, logo, board, icpcTeam, CPPCalendarConfig};
-=======
-export {CPPTheme, email, githubOrg, instagram, discordInvite, logo, CPPCalendarConfig};
->>>>>>> origin
+export {CPPTheme, email, githubOrg, discordInvite, logo, board, instagram, icpcTeam, CPPCalendarConfig};
