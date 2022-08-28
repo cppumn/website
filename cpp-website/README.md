@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In this project directory (`cpp-website`), you can run:
 
 ### `npm start`
 
@@ -33,9 +33,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is only for admins**
 
-Builds the app and deploys it to the gh-pages branch. Requires admin permissions on this repo, otherwise you won't be able to push to that branch.
+Builds the app and deploys it to the `gh-pages` branch. Requires admin permissions on this repo, otherwise you won't be able to push to that branch.
 
-You do not need to run `npm run build` first as this command already takes care of building
+You do __NOT__ need to run `npm run build` first as this command already takes care of building
 
 ## Learn More
 
