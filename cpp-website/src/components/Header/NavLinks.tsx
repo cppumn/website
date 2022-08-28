@@ -1,5 +1,6 @@
-import { Box, Stack } from "@chakra-ui/react";
+import { Box, Stack, Button, Link } from "@chakra-ui/react";
 import NavItem from "./NavItem";
+import { CPPTheme, discordInvite } from "globals/CPPInfo";
 
 type NavLinksProps = {
   isOpen: boolean;
@@ -30,6 +31,23 @@ const NavLinks = ({ isOpen }: NavLinksProps) => {
           content="Contact"
           path="/contact"
         />
+        <Link href={discordInvite} isExternal>
+          <Button         
+            display="inline-block" 
+            width="100px"
+            fontSize={['sm', 'md', 'lg', 'xl']}
+            position="relative"
+            color="white"
+            textDecoration="none" 
+            variant='outline'
+            _hover={{
+              bg: "white",
+              color: CPPTheme.darkblue
+            }}
+          >
+            Join
+          </Button>
+        </Link>
       </Stack>
     </Box>
   );

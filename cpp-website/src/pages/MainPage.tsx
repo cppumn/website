@@ -1,6 +1,7 @@
 import { SimpleGrid, Stack, Heading, Text, AspectRatio } from "@chakra-ui/react";
 import { faPeopleGroup, faTrophy, faChalkboard, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import HomeContainer from "components/Home/HomeContainer";
+import Hero from "components/Home/Banner/Hero";
 import HomeSection from "components/Home/HomeSection";
 import HomeCard from "components/Home/HomeCard";
 import { CPPTheme } from "globals/CPPInfo";
@@ -47,6 +48,7 @@ const MainPage = () => {
 
   return (
     <HomeContainer>
+      <Hero />
       <HomeSection>
         <Heading color={CPPTheme.darkblue} fontSize="1.5rem" fontWeight={450}>Who are we?</Heading>
         <Text>

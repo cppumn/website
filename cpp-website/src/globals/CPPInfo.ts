@@ -10,6 +10,8 @@ const email = "cpp@umn.edu"; // not an actual email... yet
 const githubOrg = "https://github.com/cppumn";
 const discordInvite = "https://discord.gg/6Cyr7K9Sfk";
 const logo = require("img/logos/ClubLogo.png");
+const board = require("img/logos/board.png");
+const icpcTeam = require("img/logos/icpc-team.jpg");
 
 const CPPCalendarConfig = {
   clientId: "c_04skom520lh4t0kium9qg1r1vg@group.calendar.google.com",
@@ -17,4 +19,4 @@ const CPPCalendarConfig = {
   publicUrl: "https://calendar.google.com/calendar/u/0?cid=Y18wNHNrb201MjBsaDR0MGtpdW05cWcxcjF2Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
 }
 
-export {CPPTheme, email, githubOrg, discordInvite, logo, CPPCalendarConfig};
+export {CPPTheme, email, githubOrg, discordInvite, logo, board, icpcTeam, CPPCalendarConfig};
