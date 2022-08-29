@@ -1,11 +1,8 @@
-import { Flex, Stack, Button, Heading, Text, keyframes } from "@chakra-ui/react";
+import { Flex, Stack, Link, Button, Heading, Text, keyframes } from "@chakra-ui/react";
 import HeroImages from "./HeroImages";
-import { CPPTheme } from "globals/CPPInfo";
+import { CPPTheme, discordInvite } from "globals/CPPInfo";
 import { fontSizes } from "globals/fontSizes"
 
-type HeroContentProps = {
-  props?: any
-}
 const slide = keyframes`
   0% {
     transform: translateX(-100%);
@@ -45,18 +42,24 @@ const HeroContent = (props: any) => {
           we've got it all.
         </Text>
         <Flex gap="1.5rem" flexDir={{base: "column", sm: "row"}}>
-          <Button 
-            bg={CPPTheme.darkblue}
-            borderRadius="2rem"
-            fontSize={fontSizes.medium}
-            p={["0.8rem", "1rem", "1.5rem", "2rem"]}
-            _hover={{
-              bg: "white",
-              color: CPPTheme.darkblue
-            }}
+          <Link
+            css={{textDecoration: "none !important"}}
+            href={discordInvite}
+            isExternal
           >
-            Join The Club
-          </Button>
+            <Button 
+              bg={CPPTheme.darkblue}
+              borderRadius="2rem"
+              fontSize={fontSizes.medium}
+              p={["0.8rem", "1rem", "1.5rem", "2rem"]}
+              _hover={{
+                bg: "white",
+                color: CPPTheme.darkblue
+              }}
+            >
+              Join The Club
+            </Button>
+          </Link>
           <Button
             onClick={() => props.scroll.current.scrollIntoView({ behavior: 'smooth', block: 'start' })} 
             variant="outline"
