@@ -6,7 +6,7 @@ body { margin: 0; }
 
 .visually-hidden { position: absolute; overflow: hidden; clip: rect(0, 0, 0, 0); width: 1px; height: 1px; margin: -1px; padding: 0; border: 0 none; }
 
-#umnhf-h.umnhf, #umnhf-f.umnhf, #umnhf-alt.umnhf, #umnhf-uf.umnhf, #umnhf-h-ma, #umn-main { position: static; z-index: auto; top: auto; right: auto; bottom: auto; left: auto; visibility: visible; float: none; clear: none; overflow: visible; width: 1152px; min-width: 0; max-width: none; height: auto; min-height: 0; max-height: none; margin: 0 auto; padding: 0; text-align: left; white-space: normal; text-decoration: none; text-indent: 0; letter-spacing: normal; text-transform: none; border: none; background: none; font: normal normal normal 14px/20px Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; line-height: 20px; }
+#umnhf-h.umnhf, #umnhf-f.umnhf, #umnhf-alt.umnhf, #umnhf-uf.umnhf, #umnhf-h-ma, #umn-main { position: static; z-index: auto; top: auto; right: auto; bottom: auto; left: auto; visibility: visible; float: none; clear: none; overflow: visible; width: 100%; min-width: 0; max-width: none; height: auto; min-height: 0; max-height: none; margin: 0 auto; padding: 0; text-align: left; white-space: normal; text-decoration: none; text-indent: 0; letter-spacing: normal; text-transform: none; border: none; background: none; font: normal normal normal 14px/20px Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; line-height: 20px; }
 
 .printer { display: none; }
 
@@ -30,7 +30,7 @@ body { margin: 0; }
 
 #umnhf-h-mast { position: relative; min-height: 64px; margin: 0 auto; background: #7a0019; }
 
-#umnhf-h-logo { display: block; float: left; overflow: hidden; width: 288px; height: 38px; margin: 13px 10px 13px 54px; white-space: nowrap; text-indent: 100%; background-size: 288px 67px; background: transparent url("../img/sprites/tc/D2D-gld-wht.png") 0 0 no-repeat; }
+#umnhf-h-logo { display: block; float: left; overflow: hidden; width: 288px; height: 38px; margin: 13px 10px 13px 30px; white-space: nowrap; text-indent: 100%; background-size: 288px 67px; background: transparent url("../img/sprites/tc/D2D-gld-wht.png") 0 0 no-repeat; }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 192dpi) { #umnhf-h-logo { background: transparent url("../img/sprites/tc/D2D-gld-wht@2x.png") 0 0 no-repeat; background-size: 288px auto; } }
 
 #umnhf-h-ql { position: absolute; top: 8px; right: 54px; width: auto; margin: 0; list-style-type: none; color: #fff; font-weight: 100; }
@@ -42,7 +42,7 @@ body { margin: 0; }
 
 #umnhf-m-search { display: none; }
 
-#umnhf-h-search { position: absolute; top: 30px; right: 54px; width: 249px; height: 22px; }
+#umnhf-h-search { position: absolute; top: 30px; right: 30px; width: 249px; height: 22px; }
 #umnhf-h-search label.umnhf { display: none; }
 
 .mobile input[type="text"] { -webkit-appearance: none; -moz-border-radius: 0; border-radius: 0; }
@@ -63,7 +63,7 @@ body { margin: 0; }
   #umnhf-h-mast { position: relative; height: 50px; background-position: left bottom; }
   #umnhf-h-logo { display: block; background-position: 0 -38px; height: 29px; width: 246px; }
   #umnhf-h-search.mobile { position: relative; top: auto; right: auto; display: block; width: 225px; height: 30px; margin: 10px 0 5px 17px; }
-  #umnhf-h .umnhf-m-cancel { color: #404d5b; }
+  #umnhf-h .umnhf-m-cancel { color: #649bd3; }
   #umnhf-h-st { display: block; width: 192px; }
   #umnhf-h-sb { right: 0; display: block; } }
 @media all and (max-width: 380px) { #umnhf-m-search .mobile { position: absolute; top: 13px; right: 10px; left: auto; width: auto; height: auto; -moz-border-radius: 4px; border-radius: 4px; }
@@ -73,20 +73,20 @@ body { margin: 0; }
 #umnhf-alt.umnhf #umnhf-alt-sn { float: left; }
 
 #umnhf-alt-sn { width: 70%; padding-left: 54px; }
-#umnhf-alt-sn h2 { margin: 35px 0 0 0; padding: 0; color: #404d5b; font: normal normal normal 30px/40px Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; }
+#umnhf-alt-sn h2 { margin: 35px 0 0 0; padding: 0; color: #649bd3; font: normal normal normal 30px/40px Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; }
 #umnhf-alt-sn p { margin: 0 0 15px 0; padding: 0; color: #8a8a8a; font: normal normal normal 20px/26px Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; }
 
 #umnhf-alt-n { float: right; width: 30%; height: 184px; padding-right: 54px; }
 #umnhf-alt-n ul { height: 184px; padding: 0; list-style-type: none; text-align: right; font-weight: 300; }
 #umnhf-alt-n li { display: inline-block; width: 50%; text-align: left; }
 #umnhf-alt-n a { display: inline-block; box-sizing: border-box; width: 100%; font-weight: 300; padding: 0.5em; line-height: 20px; }
-#umnhf-alt-n a:link, #umnhf-alt-n a:active, #umnhf-alt-n a:visited { -webkit-transition: background-color 0.3s,border-color 0.3s; transition: background-color 0.3s,border-color 0.3s; text-decoration: none; color: #404d5b; border-bottom: none; font-size: 16px; }
+#umnhf-alt-n a:link, #umnhf-alt-n a:active, #umnhf-alt-n a:visited { -webkit-transition: background-color 0.3s,border-color 0.3s; transition: background-color 0.3s,border-color 0.3s; text-decoration: none; color: #649bd3; border-bottom: none; font-size: 16px; }
 #umnhf-alt-n a:hover, #umnhf-alt-n a:focus { background-color: #dbdbdb; }
 #umnhf-alt-n a.active { color: #7a0019; font-weight: 500; background-color: #f0efee; }
 #umnhf-alt-n a.active:hover { background-color: #dbdbdb; }
 
 .display-after-menu-collapse.umnhf { display: none; }
-@media (max-width: 775px) { .display-after-menu-collapse.umnhf { display: block; width: 100%; cursor: pointer; text-align: center; color: #fff; background-color: #404d5b; font: 300 normal normal 28px/50px Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; } }
+@media (max-width: 775px) { .display-after-menu-collapse.umnhf { display: block; width: 100%; cursor: pointer; text-align: center; color: #fff; background-color: #649bd3; font: 300 normal normal 28px/50px Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; } }
 
 @media screen and (max-width: 1152px) { #umnhf-alt.umnhf { width: 100%; padding: 0; }
   #umnhf-alt-sn { width: 60%; }
@@ -102,9 +102,9 @@ body { margin: 0; }
 #umnhf-uf.umnhf { position: relative; overflow: hidden; border-top: 1px solid #f0efee; }
 #umnhf-uf a:hover, #umnhf-uf a:active, #umnhf-uf a:focus { text-decoration: underline; }
 #umnhf-uf p { margin: 0; }
-#umnhf-uf p, #umnhf-uf a, #umnhf-uf li, #umnhf-uf h3 { text-decoration: none; color: #404d5b; }
-#umnhf-uf h2.umnhf-f-title { margin: 0 0 15px; padding: 16px 8px 16px 54px; text-transform: uppercase; color: #404d5b; border-bottom: 1px solid #dbdbdb; font-family: Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; font-size: 16px; font-weight: normal; }
-#umnhf-uf h3.umnhf-f-title, #umnhf-uf p.umnhf-f-title { margin: 0; text-transform: uppercase; color: #404d5b; font-family: Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; font-size: 14px; font-weight: bold; }
+#umnhf-uf p, #umnhf-uf a, #umnhf-uf li, #umnhf-uf h3 { text-decoration: none; color: #649bd3; }
+#umnhf-uf h2.umnhf-f-title { margin: 0 0 15px; padding: 16px 8px 16px 54px; text-transform: uppercase; color: #649bd3; border-bottom: 1px solid #dbdbdb; font-family: Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; font-size: 16px; font-weight: normal; }
+#umnhf-uf h3.umnhf-f-title, #umnhf-uf p.umnhf-f-title { margin: 0; text-transform: uppercase; color: #649bd3; font-family: Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; font-size: 14px; font-weight: bold; }
 
 #umnhf-uf-ci, #umnhf-uf-sm { float: left; clear: both; width: 40%; padding: 0 0 0 54px; font-style: normal; }
 
@@ -139,18 +139,18 @@ body { margin: 0; }
   #umnhf-uf-ul ul { float: none; padding-left: 17px; text-align: inherit; } }
 #umnhf-f.umnhf { margin: 5px auto; border-top: 1px solid #f0f0f0; padding: 15px 0 0 0; }
 #umnhf-f a:hover, #umnhf-f a:active, #umnhf-f a:focus { text-decoration: underline; }
-#umnhf-f a, #umnhf-f li, #umnhf-f h3 { text-decoration: none; color: #404d5b; }
+#umnhf-f a, #umnhf-f li, #umnhf-f h3 { text-decoration: none; color: #649bd3; }
 #umnhf-f .f-sfs { display: none; }
 #umnhf-f .f-sfs span { display: inline-block; width: 12px; height: 12px; background: transparent url("../img/sprites/lock-search-g.png") 0 0 no-repeat; }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 192dpi) { #umnhf-f .f-sfs span { background: transparent url("../img/sprites/lock-search-g@2x.png") 0 0 no-repeat; background-size: 22px 34px; } }
 #umnhf-f .umnhf-f-cl { float: left; box-sizing: border-box; width: 25%; height: 190px; padding: 5px; }
 #umnhf-f #umnhf-f-myu { display: none; }
-#umnhf-f ul, #umnhf-f p { margin: 0 0 16px 0; padding: 0; list-style: none; color: #404d5b; }
-#umnhf-f .umnhf-f-title { text-transform: uppercase; color: #404d5b; font-family: Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; }
-#umnhf-f h2.umnhf-f-title { margin: 0 -54px 15px -54px; padding: 16px 8px 16px 54px; text-transform: uppercase; color: #404d5b; border-bottom: 1px solid #dbdbdb; font-family: Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; font-size: 16px; font-weight: normal; }
-#umnhf-f h3.umnhf-f-title { margin: 0; text-transform: uppercase; color: #404d5b; font-family: Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; font-size: 14px; font-weight: bold; }
+#umnhf-f ul, #umnhf-f p { margin: 0 0 16px 0; padding: 0; list-style: none; color: #649bd3; }
+#umnhf-f .umnhf-f-title { text-transform: uppercase; color: #649bd3; font-family: Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; }
+#umnhf-f h2.umnhf-f-title { margin: 0 -54px 15px -54px; padding: 16px 8px 16px 54px; text-transform: uppercase; color: #649bd3; border-bottom: 1px solid #dbdbdb; font-family: Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; font-size: 16px; font-weight: normal; }
+#umnhf-f h3.umnhf-f-title { margin: 0; text-transform: uppercase; color: #649bd3; font-family: Helvetica, "Helvetica Neue", "Futura", Verdana, "Geneva", sans-serif; font-size: 14px; font-weight: bold; }
 #umnhf-f small { display: block; padding: 5px 54px; text-align: center; font-size: 0.8rem; line-height: 1rem; }
-#umnhf-f small a:link, #umnhf-f small a:active, #umnhf-f small a:visited { color: #404d5b; text-decoration: underline; }
+#umnhf-f small a:link, #umnhf-f small a:active, #umnhf-f small a:visited { color: #649bd3; text-decoration: underline; }
 
 @media (max-width: 775px) { #umnhf-f.umnhf h2.umnhf-f-title { margin: 0; padding-left: 27px; }
   #umnhf-f.umnhf .umnhf-f-cl { display: block; width: 100%; height: auto; margin: 0 0 15px 0; padding: 0; }
