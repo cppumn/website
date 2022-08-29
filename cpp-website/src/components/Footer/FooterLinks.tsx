@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-import {email, githubOrg, instagram, discordInvite} from "globals/CPPInfo"
+import {email, githubOrg, instagram, discordInvite} from "globals/CPPInfo";
+import { fontSizes } from "globals/fontSizes";
 
 const FooterLinks = () => {
   return (
@@ -20,19 +21,19 @@ const FooterLinks = () => {
         <FontAwesomeIcon icon={faEnvelope}/>
       </ChakraLink>
 
-      <Divider orientation="vertical" borderColor="#000000"/>
+      <Divider orientation="vertical"/>
 
       <ChakraLink href={githubOrg} title={githubOrg} isExternal>
         <FontAwesomeIcon icon={faGithub}/>
       </ChakraLink>
 
-      <Divider orientation="vertical" borderColor="#000000"/>
+      <Divider orientation="vertical"/>
 
       <ChakraLink href={instagram} title={instagram} isExternal>
         <FontAwesomeIcon icon={faInstagram} />
       </ChakraLink>
 
-      <Divider orientation="vertical" borderColor="#000000"/>
+      <Divider orientation="vertical"/>
 
       <ChakraLink href={discordInvite} title={discordInvite} isExternal>
         <FontAwesomeIcon icon={faDiscord} />
