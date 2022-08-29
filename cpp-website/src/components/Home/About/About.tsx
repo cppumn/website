@@ -27,7 +27,7 @@ const CPPMainCards = [
         where we dive into challenging computer science topics.
       `,
     icon: faChalkboard,
-    link: <AboutLink link={CPPCalendarConfig.publicUrl} isExternal={true} desc={"Check Out Our Next Lecture"} />
+    link: <AboutLink link={CPPCalendarConfig.publicUrl} isExternal={true} desc={"Follow Our Calendar"} />
   },
   {
     title: "Contests",
@@ -45,7 +45,7 @@ const CPPMainCards = [
         interact with the broader computer science community.
       `,
     icon: faCalendar,
-    link: <AboutLink link="/schedule" isExternal={false} desc={"See Our Schedule"} />
+    link: <AboutLink link="/schedule" isExternal={false} desc={"See Upcoming Events"} />
   }
 ];
 
