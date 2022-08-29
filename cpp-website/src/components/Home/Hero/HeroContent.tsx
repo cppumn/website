@@ -42,7 +42,11 @@ const HeroContent = (props: any) => {
           we've got it all.
         </Text>
         <Flex gap="1.5rem" flexDir={{base: "column", sm: "row"}}>
-          <Link href={discordInvite} isExternal>
+          <Link
+            css={{textDecoration: "none !important"}}
+            href={discordInvite}
+            isExternal
+          >
             <Button 
               bg={CPPTheme.darkblue}
               borderRadius="2rem"
