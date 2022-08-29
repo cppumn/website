@@ -14,7 +14,6 @@ const NavContainer = ({ children }: NavContainerProps) => {
       justify="space-between"
       wrap="wrap"
       w="100%"
-      mb={4}
       p={8}
       pt={4}
       pb={4}
