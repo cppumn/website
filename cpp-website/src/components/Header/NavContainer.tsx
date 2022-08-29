@@ -17,7 +17,7 @@ const NavContainer = ({ children }: NavContainerProps) => {
       p={8}
       pt={4}
       pb={4}
-      bg={CPPTheme.blue}
+      bg={CPPTheme.darkblue}
       color="white"
     >
       {children}

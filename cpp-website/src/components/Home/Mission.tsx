@@ -1,5 +1,6 @@
 import { Flex, Box, Text } from "@chakra-ui/react";
 import SectionTitle from "./SectionTitle";
+import { fontSizes } from "globals/fontSizes";
 
 const Mission = () => {
   return (
@@ -11,7 +12,7 @@ const Mission = () => {
         marginTop="4rem"
         marginBottom="4rem"
       >
-        <Text fontSize={["1rem", "1rem", "1.5rem", "1.5rem"]}>
+        <Text fontSize={fontSizes.small}>
           We're a student group at the University of Minnesota interested 
           in competitive programming. Our goal is to create an environment
           where students can hone their speed and accuracy in solving 

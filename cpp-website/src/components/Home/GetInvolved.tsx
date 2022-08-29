@@ -1,6 +1,7 @@
 import { Flex, Stack, AspectRatio, Heading, Text } from "@chakra-ui/react";
 import { CPPTheme } from "globals/CPPInfo";
 import SectionTitle from "./SectionTitle";
+import { fontSizes } from "globals/fontSizes";
 
 const GetInvolved = () => {
   return (
@@ -16,12 +17,12 @@ const GetInvolved = () => {
         <Stack flex="1 1 auto" spacing="1rem">
           <Heading 
             color={CPPTheme.blue} 
-            fontSize={["1.5rem", "1.5rem", "2rem", "2.5rem"]}
+            fontSize={fontSizes.medium}
             fontWeight={450}
           >
             Interact
           </Heading>
-          <Text fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5em"]}>
+          <Text fontSize={fontSizes.small}>
             We currently maintain a discord server listed in the University
             of Minnesota Student Hub. This is a great place to interact with existing
             or new members to the club. You can join through the widget
@@ -30,23 +31,23 @@ const GetInvolved = () => {
           </Text>
           <Heading 
             color={CPPTheme.blue} 
-            fontSize={["1.5rem", "1.5rem", "2rem", "2.5rem"]}
+            fontSize={fontSizes.medium}
             fontWeight={450}
           >
             Check Our Schedule
           </Heading>
-          <Text fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5em"]}>
+          <Text fontSize={fontSizes.small}>
             Visit the schedule page! It's a great place to view when our events and 
             meetings are and where they are being hosted.
           </Text>
           <Heading 
             color={CPPTheme.blue} 
-            fontSize={["1.5rem", "1.5rem", "2rem", "2.5rem"]}
+            fontSize={fontSizes.medium}
             fontWeight={450}
           >
             Where To Start
           </Heading>
-          <Text fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5em"]}>
+          <Text fontSize={fontSizes.small}>
             A great place to begin on what to cover and some tools that can help is our 
             Getting Started page. The guide provided there has been setup by the experienced 
             competitive programmers in our commmunity and is a fantastic resource for newcomers.

@@ -1,6 +1,7 @@
 import { Flex, Stack, Button, Heading, Text, keyframes } from "@chakra-ui/react";
 import HeroImages from "./HeroImages";
 import { CPPTheme } from "globals/CPPInfo";
+import { fontSizes } from "globals/fontSizes"
 
 type HeroContentProps = {
   props?: any
@@ -33,21 +34,21 @@ const HeroContent = (props: any) => {
         spacing="1rem"
         animation={`1s ease-out 0s 1 ${slide}`}
       >
-        <Text fontSize="1rem"> 
+        <Text fontSize={fontSizes.xSmall}> 
           University of Minnesota’s 
         </Text>
-        <Heading fontSize={["2rem", "2rem", "2rem", "3rem"]}>
+        <Heading fontSize={fontSizes.xLarge}>
           Competitive Programming Club
         </Heading>
-        <Text fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5em"]}>
+        <Text fontSize={fontSizes.medium}>
           From collaborating on contests to helping with coding interviews,
           we've got it all.
         </Text>
-        <Flex gap="1.5rem">
+        <Flex gap="1.5rem" flexDir={{base: "column", sm: "row"}}>
           <Button 
             bg={CPPTheme.darkblue}
             borderRadius="2rem"
-            fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5em"]}
+            fontSize={fontSizes.medium}
             p={["0.8rem", "1rem", "1.5rem", "2rem"]}
             _hover={{
               bg: "white",
@@ -60,7 +61,7 @@ const HeroContent = (props: any) => {
             onClick={() => props.scroll.current.scrollIntoView({ behavior: 'smooth', block: 'start' })} 
             variant="outline"
             borderRadius="2rem"
-            fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5em"]}
+            fontSize={fontSizes.medium}
             p={["0.8rem", "1rem", "1.5rem", "2rem"]}
             _hover={{
               bg: "white",

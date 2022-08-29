@@ -1,5 +1,6 @@
 import { Flex, Heading } from "@chakra-ui/react";
 import { CPPTheme } from "globals/CPPInfo";
+import { fontSizes } from "globals/fontSizes"
 
 type SectionTitleProps = {
   content: string,
@@ -18,7 +19,7 @@ const SectionTitle = ({ content, ...props }: SectionTitleProps) => {
       {...props}
     >
       <Heading 
-        fontSize={["1.5rem", "1.5rem", "2rem", "3rem"]}
+        fontSize={fontSizes.xLarge}
         color="white"
       >
         {content}

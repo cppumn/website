@@ -3,6 +3,7 @@ import { IconDefinition } from "@fortawesome/fontawesome-common-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ReactNode } from "react";
 import { CPPTheme } from "globals/CPPInfo";
+import { fontSizes } from "globals/fontSizes";
 
 type AboutCardProps = {
   title: string;
@@ -32,7 +33,7 @@ const AboutCard = ({ title, desc, icon, link, ...props }: AboutCardProps) => {
           flex="0 0 75%" 
         >
           <Heading 
-            fontSize={["1.5rem", "1.5rem", "2rem", "2.5rem"]}
+            fontSize={fontSizes.large}
             fontWeight="normal"
             color='black'
           >
@@ -41,7 +42,7 @@ const AboutCard = ({ title, desc, icon, link, ...props }: AboutCardProps) => {
           <Text 
             fontWeight="light"
             color='black'
-            fontSize={["0.8rem", "1rem", "1rem", "1.5em"]}
+            fontSize={fontSizes.xSmall}
           >
             {desc}
           </Text>
@@ -49,7 +50,7 @@ const AboutCard = ({ title, desc, icon, link, ...props }: AboutCardProps) => {
         <Flex 
           justify="flex-end" 
           flex="0 0 25%"
-          fontSize={["1.5rem", "1.5rem", "2rem", "2.5rem"]}
+          fontSize={fontSizes.large}
         >
           <FontAwesomeIcon 
             icon={icon} 

@@ -1,6 +1,7 @@
 import { Flex, Box, Link as ChakraLink } from "@chakra-ui/react";
 import { ExternalLinkIcon, LinkIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
+import { fontSizes } from "globals/fontSizes";
 
 type AboutLinkProps = {
   link: string,
@@ -17,7 +18,7 @@ const AboutLink = ({ link, desc, isExternal, ...props }: AboutLinkProps) => {
       {isExternal && 
         <ChakraLink 
           href={link} 
-          fontSize={["0.8rem", "1rem", "1rem", "1.5em"]} 
+          fontSize={fontSizes.xSmall} 
           isExternal
         >
           <Flex align="center" gap="0.25rem">
@@ -27,7 +28,7 @@ const AboutLink = ({ link, desc, isExternal, ...props }: AboutLinkProps) => {
         </ChakraLink>}
       {!isExternal && 
         <Link to={link}>
-            <ChakraLink as="div" fontSize={["0.8rem", "1rem", "1rem", "1.5em"]}>
+            <ChakraLink as="div" fontSize={fontSizes.xSmall}>
               <Flex align="center" gap="0.25rem">
                 <LinkIcon />
                 {desc}

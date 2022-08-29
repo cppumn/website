@@ -1,5 +1,6 @@
-import { Flex, Link, Button, Heading, Text } from "@chakra-ui/react";
+import { Flex, Link, Button, Heading, Text, Divider } from "@chakra-ui/react";
 import { CPPTheme, discordInvite } from "globals/CPPInfo";
+import { fontSizes } from "globals/fontSizes";
 
 const Banner = () => {
   return (
@@ -9,31 +10,33 @@ const Banner = () => {
       align="center"
       gap="1rem"
       padding="2rem"
-      bgColor={CPPTheme.blue}
+      paddingBottom={0}
+      bgColor={CPPTheme.darkblue}
     >
       <Heading 
-        fontSize={["1.5rem", "1.5rem", "2rem", "3rem"]}
+        fontSize={fontSizes.xLarge}
         color="white"
       >
-        By the way, did you know we have a discord?
+        In case you haven't noticed, we have a Discord!
       </Heading>
       <Text 
-        fontSize={["0.8rem", "1rem", "1rem", "1.5em"]}
+        fontSize={fontSizes.xSmall}
         color="white"
       >
         It’s super active and a great way to meet more competitive programmers!
       </Text>
-      <Link href={discordInvite} isExternal>
-        <Button         
-          display="inline-block" 
-          fontSize={["1.5rem", "1.5rem", "2rem", "3rem"]}
-          position="relative"
+      <Link 
+        css={{textDecoration: "none !important"}}
+        href={discordInvite}
+        isExternal
+      >
+        <Button
+          fontSize={fontSizes.large}
           color="white"
-          textDecoration="none" 
+          textDecoration="none"
           variant='outline'
           borderRadius="2rem"
-          width={["225px", "300px", "300px", "500px"]}
-          height={["50px", "100px", "100px", "100px"]}
+          p={[6, 6, 8, 10]}
           _hover={{
             bg: "white",
             color: CPPTheme.blue
@@ -42,6 +45,7 @@ const Banner = () => {
           Join The Discord
         </Button>
       </Link>
+      <Divider mt="1rem" borderWidth={1}/>
     </Flex>
   );
 }
