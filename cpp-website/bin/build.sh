@@ -8,8 +8,8 @@
 #   exit 1 
 # fi
 
-# pulls most recent changes to main
-git pull origin main
+# # pulls most recent changes to main
+# git pull origin main
 
 # builds the build folder
 npm run build

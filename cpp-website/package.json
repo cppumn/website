@@ -2,7 +2,7 @@
   "name": "cpp-website",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://cppumn.github.io/website",
+  "homepage": "https://cpp.umn.edu",
   "dependencies": {
     "-": "^0.0.1",
     "@chakra-ui/icons": "^2.0.4",
