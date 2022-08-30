@@ -1,11 +1,11 @@
 import { Flex, Box, Text } from "@chakra-ui/react";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "components/SectionTitle";
 import { fontSizes } from "globals/fontSizes";
 
 const Mission = () => {
   return (
-    <Flex flexDirection="column" position="relative" top="-55px">
-      <SectionTitle content="Our Mission" />
+    <Flex flexDirection="column" mt={-55}>
+      <SectionTitle content="Our Mission"/>
       <Box 
         marginLeft={["1rem","2rem","3rem","4rem"]}
         marginRight={["1rem","2rem","3rem","4rem"]}
