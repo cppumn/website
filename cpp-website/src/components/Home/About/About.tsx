@@ -1,6 +1,6 @@
 import { Flex, Grid } from "@chakra-ui/react";
 import { faPeopleGroup, faTrophy, faChalkboard, faCalendar } from "@fortawesome/free-solid-svg-icons";
-import SectionTitle from "../SectionTitle";
+import SectionTitle from "components/SectionTitle";
 import AboutCard from "./AboutCard";
 import AboutLink from "./AboutLink";
 import { discordInvite, CPPCalendarConfig } from "globals/CPPInfo";
@@ -64,10 +64,8 @@ const About = ({ containerRef, ...props }: AboutProps) => {
 
   return (
     <Flex 
-      position="relative"
       flexDirection="column"
       ref={containerRef}
-      top="-55px"
       {...props}
     >
       <SectionTitle content="Why Join?" />

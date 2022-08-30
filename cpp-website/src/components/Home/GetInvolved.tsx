@@ -1,11 +1,11 @@
 import { Flex, Stack, AspectRatio, Heading, Text } from "@chakra-ui/react";
 import { CPPTheme } from "globals/CPPInfo";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "components/SectionTitle";
 import { fontSizes } from "globals/fontSizes";
 
 const GetInvolved = () => {
   return (
-    <Flex flexDirection="column" position="relative" top="-55px">
+    <Flex flexDirection="column">
       <SectionTitle content="Get Involved" />
       <Flex
         flexDirection={["column", "column", "row", "row"]}

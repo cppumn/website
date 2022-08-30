@@ -10,16 +10,16 @@ type SectionTitleProps = {
 const SectionTitle = ({ content, ...props }: SectionTitleProps) => {
   return (
     <Flex 
-      position="relative" 
-      justify="center" 
-      align="center" 
+      align="center"
       width={["200px","275px","300px","375px"]} 
-      height="90px"
+      p={4}
+      zIndex={100}
       bgColor={CPPTheme.darkblue} 
       {...props}
     >
       <Heading 
         fontSize={fontSizes.xLarge}
+        marginLeft={2}
         color="white"
       >
         {content}

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import HomeContainer from "components/Home/HomeContainer";
+import { Box, Flex } from "@chakra-ui/react";
 import Hero from "components/Home/Hero/Hero";
 import Mission from "components/Home/Mission";
 import About from "components/Home/About/About";
@@ -9,13 +9,15 @@ import Banner from "components/Home/Banner";
 const MainPage = () => {
   const aboutRef = useRef<any>(null);
   return (
-    <HomeContainer>
+    <Flex flexDir="column" m="auto">
       <Hero scrollToRef={aboutRef}/>
       <Mission />
       <About containerRef={aboutRef}/>
       <GetInvolved />
-      <Banner />
-    </HomeContainer>
+      <Box mt={55}>
+        <Banner/>
+      </Box>
+    </Flex>
   );
 }
 
