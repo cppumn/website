@@ -51,6 +51,7 @@ const HeroContent = (props: any) => {
               bg={CPPTheme.darkblue}
               borderRadius="2rem"
               fontSize={fontSizes.medium}
+              w="100%"
               p={["0.8rem", "1rem", "1.5rem", "2rem"]}
               _hover={{
                 bg: "white",

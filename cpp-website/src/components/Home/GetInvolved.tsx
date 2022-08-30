@@ -1,11 +1,11 @@
-import { Flex, Stack, AspectRatio, Heading, Text } from "@chakra-ui/react";
+import { Flex, Stack, AspectRatio, Box, Heading, Text } from "@chakra-ui/react";
 import { CPPTheme } from "globals/CPPInfo";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "components/SectionTitle";
 import { fontSizes } from "globals/fontSizes";
 
 const GetInvolved = () => {
   return (
-    <Flex flexDirection="column" position="relative" top="-55px">
+    <Flex flexDirection="column">
       <SectionTitle content="Get Involved" />
       <Flex
         flexDirection={["column", "column", "row", "row"]}
@@ -53,13 +53,15 @@ const GetInvolved = () => {
             competitive programmers in our commmunity and is a fantastic resource for newcomers.
           </Text>
         </Stack>
-        <AspectRatio flex="1 0.75 auto" w="100%" h={600}>
-          <iframe 
-            src="https://discord.com/widget?id=646499730343460864&theme=dark" 
-            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" 
-            title="Discord widget" 
-          />
-        </AspectRatio> 
+        <Box 
+          as="iframe"
+          flex="1 0.75 auto"
+          w="100%"
+          minH={[600, 600, "auto", "auto"]}
+          src="https://discord.com/widget?id=646499730343460864&theme=dark" 
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" 
+          title="Discord widget" 
+        />
       </Flex>
     </Flex>
   );

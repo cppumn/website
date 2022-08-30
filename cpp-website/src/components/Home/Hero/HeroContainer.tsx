@@ -10,6 +10,7 @@ const HeroContainer = ({ children, ...props }: HeroContainerProps) => {
   return (
     <Flex 
       height="100vh" 
+      minHeight={350}
       position="relative"
       overflow="hidden"
       {...props}

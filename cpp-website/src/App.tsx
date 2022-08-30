@@ -15,7 +15,7 @@ import { Box } from "@chakra-ui/react";
 
 function App() {
   return (
-    <chakra.div minH={"100vh"}>
+    <chakra.div minH={"100vh"} overflow="hidden">
       <Router basename={process.env.PUBLIC_URL} >
         <UofMHeader />
         <Nav />
