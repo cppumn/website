@@ -5,7 +5,6 @@ import { faDiscord, faGithub, faInstagram } from '@fortawesome/free-brands-svg-i
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import {email, githubOrg, instagram, discordInvite} from "globals/CPPInfo";
-import { fontSizes } from "globals/fontSizes";
 
 const FooterLinks = () => {
   return (
