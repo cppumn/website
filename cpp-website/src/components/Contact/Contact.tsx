@@ -27,7 +27,7 @@ const Contact = () => {
     const mail: string = `mailto:${email}`;
     const subject: string = "Page Questions - From " + name;
 
-    window.open(mail + '?subject=' + subject + '&body=' + message);
+    window.open(mail + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message));
   }
 
   return (
