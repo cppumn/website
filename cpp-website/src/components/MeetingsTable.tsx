@@ -19,12 +19,12 @@ const MeetingsTable = () => {
               <Tr>
                 <Td> Monday </Td>
                 <Td> 5:30 - 7:30 </Td>
-                <Td> TBD </Td>
+                <Td> Keller Hall 3-125 </Td>
               </Tr>
               <Tr borderBottom="0px">
                 <Td> Wednesday </Td>
                 <Td> 5:30 - 7:30 </Td>
-                <Td> TBD </Td>
+                <Td> Keller Hall 3-125 </Td>
               </Tr>
             </Tbody>
           </Table>
