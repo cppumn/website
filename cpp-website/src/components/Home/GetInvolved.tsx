@@ -1,4 +1,4 @@
-import { Flex, Stack, AspectRatio, Box, Heading, Text } from "@chakra-ui/react";
+import { Flex, Stack, AspectRatio, Box, Heading, Text, Link as ChakraLink } from "@chakra-ui/react";
 import { CPPTheme } from "globals/CPPInfo";
 import SectionTitle from "components/SectionTitle";
 import { fontSizes } from "globals/fontSizes";
@@ -37,7 +37,7 @@ const GetInvolved = () => {
             Check Our Schedule
           </Heading>
           <Text fontSize={fontSizes.small}>
-            Visit the schedule page! It's a great place to view when our events and 
+            Visit the  <ChakraLink href="/schedule" color={CPPTheme.blue}>schedule page</ChakraLink>! It's a great place to view when our events and 
             meetings are and where they are being hosted.
           </Text>
           <Heading 
@@ -49,7 +49,7 @@ const GetInvolved = () => {
           </Heading>
           <Text fontSize={fontSizes.small}>
             A great place to begin on what to cover and some tools that can help is our 
-            Getting Started page. The guide provided there has been setup by the experienced 
+            <ChakraLink href="/gettingstarted" color={CPPTheme.blue}> Getting Started page.</ChakraLink> The guide provided there has been setup by the experienced 
             competitive programmers in our commmunity and is a fantastic resource for newcomers.
           </Text>
         </Stack>
