@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7771e9db.css",
-    "main.js": "/static/js/main.711dd5cf.js",
+    "main.js": "/static/js/main.3067c1df.js",
     "static/js/787.68898001.chunk.js": "/static/js/787.68898001.chunk.js",
     "static/media/icpc-team.jpg": "/static/media/icpc-team.5d8b56c0180104f94ba2.jpg",
     "static/media/board.png": "/static/media/board.f1ab20c9b865ab320ee2.png",
@@ -27,11 +27,11 @@
     "static/media/noto-sans-vietnamese-400-normal.woff2": "/static/media/noto-sans-vietnamese-400-normal.7ac08f5e4dcd5da42613.woff2",
     "index.html": "/index.html",
     "main.7771e9db.css.map": "/static/css/main.7771e9db.css.map",
-    "main.711dd5cf.js.map": "/static/js/main.711dd5cf.js.map",
+    "main.3067c1df.js.map": "/static/js/main.3067c1df.js.map",
     "787.68898001.chunk.js.map": "/static/js/787.68898001.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7771e9db.css",
-    "static/js/main.711dd5cf.js"
+    "static/js/main.3067c1df.js"
   ]
 }
