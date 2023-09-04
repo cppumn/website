@@ -17,17 +17,19 @@ const MeetingsTable = () => {
             </Thead>
             <Tbody>
               <Tr>
-                <Td> Saturday </Td>
-                <Td> 2:00 - 4:00 </Td>
-                <Td> Discord<Text fontWeight="bold" as='a'>*</Text> </Td>
+                <Td> Tuesday </Td>
+                <Td> 5:30 - 7:30 </Td>
+                <Td> Keller Hall 3-111 </Td>
+              </Tr>
+              <Tr>
+                <Td> Thursday </Td>
+                <Td> 5:30 - 7:30 </Td>
+                <Td> Keller Hall 3-230 </Td>
               </Tr>
             </Tbody>
           </Table>
         </TableContainer>
       </Box>
-      <Text fontSize={14}>
-        <Text fontWeight="bold" as='a'>*</Text>Summer meetings are held in the voice channels on Discord
-      </Text>
     </Box>
   );
 };
