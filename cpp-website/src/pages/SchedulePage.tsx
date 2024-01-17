@@ -37,7 +37,7 @@ const SchedulePage = () => {
         Meetings
       </Heading>  
       <Text>
-        We meet twice a week and our meeting information can be found below.
+        We meet once a week and our meeting information can be found below.
         Our meetings are generally open to people with all levels of experience.
         Occasionally, a meeting might be split in a beginner and advanced section if the topic is too difficult.
       </Text>

@@ -17,14 +17,9 @@ const MeetingsTable = () => {
             </Thead>
             <Tbody>
               <Tr>
-                <Td> Tuesday </Td>
+                <Td> Wednesday </Td>
                 <Td> 5:30 - 7:30 </Td>
-                <Td> Keller Hall 3-111 </Td>
-              </Tr>
-              <Tr>
-                <Td> Thursday </Td>
-                <Td> 5:30 - 7:30 </Td>
-                <Td> Keller Hall 3-230 </Td>
+                <Td> Keller Hall 3-115 </Td>
               </Tr>
             </Tbody>
           </Table>
