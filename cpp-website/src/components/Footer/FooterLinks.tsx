@@ -1,10 +1,10 @@
 import { Flex, Link as ChakraLink, Divider } from "@chakra-ui/react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faGithub, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-import {email, githubOrg, instagram, discordInvite} from "globals/CPPInfo";
+import {email, githubOrg, instagram, discordInvite, youtube} from "globals/CPPInfo";
 
 const FooterLinks = () => {
   return (
@@ -36,6 +36,12 @@ const FooterLinks = () => {
 
       <ChakraLink href={discordInvite} title={discordInvite} isExternal>
         <FontAwesomeIcon icon={faDiscord} />
+      </ChakraLink>
+      
+      <Divider orientation="vertical"/>
+
+      <ChakraLink href={youtube} title={youtube} isExternal>
+        <FontAwesomeIcon icon={faYoutube} />
       </ChakraLink>
 
     </Flex>

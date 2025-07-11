@@ -9,11 +9,11 @@ type AboutCardProps = {
   title: string;
   desc: string;
   icon: IconDefinition;
-  link: ReactNode,
+  links: ReactNode[],
   props?: any;
 };
 
-const AboutCard = ({ title, desc, icon, link, ...props }: AboutCardProps) => {
+const AboutCard = ({ title, desc, icon, links, ...props }: AboutCardProps) => {
   return (
     <Flex
       flexDirection="column"
@@ -58,7 +58,12 @@ const AboutCard = ({ title, desc, icon, link, ...props }: AboutCardProps) => {
             size="lg"/>
         </Flex>
       </Flex>
-      {link}
+      <Flex
+        flexDirection="column" 
+      >
+        {links[0]}
+        {links[1] /** Kind of surprised this didn't break anything */} 
+      </Flex>
     </Flex>
   );
 }

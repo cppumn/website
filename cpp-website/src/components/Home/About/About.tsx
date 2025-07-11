@@ -3,7 +3,7 @@ import { faPeopleGroup, faTrophy, faChalkboard, faCalendar } from "@fortawesome/
 import SectionTitle from "components/SectionTitle";
 import AboutCard from "./AboutCard";
 import AboutLink from "./AboutLink";
-import { discordInvite, CPPCalendarConfig } from "globals/CPPInfo";
+import { discordInvite, CPPCalendarConfig, youtube } from "globals/CPPInfo";
 
 type AboutProps = {
   containerRef: React.MutableRefObject<null>,
@@ -18,16 +18,19 @@ const CPPMainCards = [
         through the toughest problems they are confronted with.
       `,
     icon: faPeopleGroup,
-    link: <AboutLink link={discordInvite} isExternal={true} desc={"Join Our Discord"} />
+    links: [<AboutLink link={discordInvite} isExternal={true} desc={"Join Our Discord"} />]
   },
   {
     title: "Lectures",
     desc: `
         Lectures are ran by experienced competitive programmers
         where we dive into challenging computer science topics.
+        Some lectures will be recorded on our YouTube channel.
       `,
     icon: faChalkboard,
-    link: <AboutLink link={CPPCalendarConfig.publicUrl} isExternal={true} desc={"Follow Our Calendar"} />
+    links: [<AboutLink link={CPPCalendarConfig.publicUrl} isExternal={true} desc={"Follow Our Calendar"} />,
+            <AboutLink link={youtube} isExternal={true} desc={"Watch Recorded Lectures"} />
+    ]
   },
   {
     title: "Contests",
@@ -36,7 +39,7 @@ const CPPMainCards = [
         to top competitors can compete at different levels.
       `,
     icon: faTrophy,
-    link: <AboutLink link={"https://open.kattis.com/universities/umn.edu"} isExternal={true} desc={"See Our Ranking List On Kattis"} />
+    links: [<AboutLink link={"https://open.kattis.com/universities/umn.edu"} isExternal={true} desc={"See Our Ranking List On Kattis"} />]
   },
   {
     title: "Events",
@@ -45,20 +48,21 @@ const CPPMainCards = [
         interact with the broader computer science community.
       `,
     icon: faCalendar,
-    link: <AboutLink link="/schedule" isExternal={false} desc={"See Upcoming Events"} />
+    links: [<AboutLink link="/schedule" isExternal={false} desc={"See Upcoming Events"} />]
   }
 ];
 
 const About = ({ containerRef, ...props }: AboutProps) => {
 
   const activities = CPPMainCards.map(entry => {
+    const links: React.ReactNode[] = [entry.links];
     return (
       <AboutCard 
         key={entry.title} 
         title={entry.title} 
         desc={entry.desc} 
         icon={entry.icon} 
-        link={entry.link} />
+        links={links} />
     )
   });
 
