@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { UnderlinedText } from "globals/styledComponents";
+import { CPPTheme } from "globals/CPPInfo";
 
 type NavItemProps = {
   content: string;
@@ -13,7 +14,7 @@ const NavItem = ({ content, path }: NavItemProps) => {
         display="inline-block" 
         fontSize={['sm', 'md', 'lg', 'xl']}
         position="relative"
-        linecolor="#0087ca"
+        linecolor={CPPTheme.lightblue}
         color="white"
         textDecoration="none"
       >

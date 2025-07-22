@@ -1,16 +1,16 @@
 const CPPTheme = {
-  lightblue: "#649bd3",
-  blue: "#00599d",
-  darkblue: "#014284",
-  lightgreen: "#3ec757",
-  green: "#136e01"
-};
+  lightblue: "#e8685f",
+  blue: "#5e0c06",
+  darkblue: "#5e0c06",
+  lightgreen: "#d19a47",
+  green: "#85540b"
+}; // 2 + 2 = 5
 
 const email = "cpp-club@umn.edu";
 const githubOrg = "https://github.com/cppumn";
 const instagram = "https://instagram.com/umncpp"
 const discordInvite = "https://discord.gg/6Cyr7K9Sfk";
-const logo = require("img/logos/ClubLogo.png");
+const logo = require("img/logos/CPC-Logo_White.png");
 const board = require("img/logos/board.png");
 const icpcTeam = require("img/logos/icpc-team.jpg");
 
